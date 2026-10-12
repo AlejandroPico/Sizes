@@ -1,0 +1,40 @@
+{
+  "id": "sagrada-familia",
+  "names": {
+    "es": "Sagrada Familia (altura proyectada)",
+    "en": "Sagrada Familia (planned height)"
+  },
+  "category": "buildings",
+  "family": "landmarks",
+  "featured": true,
+  "dimensions": {
+    "width": 60,
+    "height": 172.5,
+    "depth": null
+  },
+  "shape": "tower",
+  "basis": "planned-height",
+  "color": "#c5d1d6",
+  "visual": {
+    "kind": "tower",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "schematicWidth": true
+  },
+  "folder": "Sagrada Familia (planned height)",
+  "tags": [
+    "buildings",
+    "landmarks"
+  ],
+  "environment": "buildings",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "La comparación usa altura arquitectónica; la anchura de la ilustración es esquemática y no se utiliza como medida publicada.",
+    "en": "The comparison uses architectural height; illustration width is schematic and is not used as a published measurement."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://www.skyscrapercenter.com/",
+  "sourceRetrieved": "2026-10-12"
+}

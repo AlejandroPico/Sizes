@@ -1,0 +1,52 @@
+{
+  "id": "tethys",
+  "names": {
+    "es": "Tethys",
+    "en": "Tethys"
+  },
+  "category": "space",
+  "family": "moons",
+  "parent": "saturn",
+  "featured": false,
+  "dimensions": {
+    "width": 1061947.400844304,
+    "height": 1061947.400844304,
+    "depth": 1061947.400844304
+  },
+  "basis": "mean-diameter",
+  "measurementStatus": "estimated",
+  "source": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+  "provenance": {
+    "importedFrom": "AlejandroPico/Universal/src/moon-catalog.json",
+    "originalSource": "JPL · elementos medios SAT441",
+    "naif": 603
+  },
+  "properties": {
+    "parent": {
+      "value": "saturn",
+      "unit": ""
+    }
+  },
+  "summary": {
+    "es": "Satélite natural de saturn. Dimensiones del catálogo JPL importado de Universal. Una figura sin mapa es una aproximación, no una superficie observada.",
+    "en": "Natural satellite of saturn. Dimensions from the JPL catalog imported from Universal. An unmapped shape is an approximation, not an observed surface."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": null,
+    "glb": null
+  },
+  "folder": "Tethys",
+  "tags": [
+    "space",
+    "moons"
+  ],
+  "color": "#aabcc9",
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12"
+}

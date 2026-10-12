@@ -1,0 +1,39 @@
+{
+  "id": "observable-universe",
+  "names": {
+    "es": "Universo observable",
+    "en": "Observable universe"
+  },
+  "category": "space",
+  "family": "cosmos",
+  "featured": true,
+  "dimensions": {
+    "width": 8.8e+26,
+    "height": 8.8e+26,
+    "depth": 8.8e+26
+  },
+  "shape": "sphere",
+  "basis": "comoving-diameter",
+  "color": "#aabcc9",
+  "measurementStatus": "estimated",
+  "summary": {
+    "es": "Diámetro comóvil aproximado de la región observable, unos 93 mil millones de años luz. No mide el universo completo. El fondo cósmico de microondas es luz de una época temprana, no una esfera sólida.",
+    "en": "Approximate comoving diameter of the observable region, about 93 billion light-years. This is not the size of the entire universe. The cosmic microwave background is early light, not a solid sphere."
+  },
+  "folder": "Observable universe",
+  "tags": [
+    "space",
+    "cosmos"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

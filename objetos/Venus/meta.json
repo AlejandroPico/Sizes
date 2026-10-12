@@ -1,0 +1,49 @@
+{
+  "id": "venus",
+  "names": {
+    "es": "Venus",
+    "en": "Venus",
+    "ca": "Venus"
+  },
+  "category": "space",
+  "family": "planets",
+  "featured": true,
+  "dimensions": {
+    "width": 12104000,
+    "height": 12104000,
+    "depth": 12104000
+  },
+  "basis": "equatorial-diameter",
+  "measurementStatus": "measured",
+  "properties": {
+    "density": {
+      "value": 5243,
+      "unit": "kg/m³"
+    }
+  },
+  "color": "#d9b17e",
+  "summary": {
+    "es": "Venus. Se compara su diámetro ecuatorial. La superficie corresponde a observaciones cuando hay textura; no se inventa detalle en zonas sin cartografía.",
+    "en": "Venus. The comparison uses equatorial diameter. Observed surface assets are used where available; unmapped detail is not invented."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg",
+    "clouds": null,
+    "glb": null,
+    "rings": null
+  },
+  "folder": "Venus",
+  "tags": [
+    "space",
+    "planets"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

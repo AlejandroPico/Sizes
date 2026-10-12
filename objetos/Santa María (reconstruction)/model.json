@@ -1,0 +1,9 @@
+{
+  "type": "caravel",
+  "dimensions": {
+    "width": 25,
+    "height": 15,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

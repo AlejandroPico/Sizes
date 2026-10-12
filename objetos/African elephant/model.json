@@ -1,0 +1,9 @@
+{
+  "type": "elephant",
+  "dimensions": {
+    "width": 6.5,
+    "height": 3.3,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

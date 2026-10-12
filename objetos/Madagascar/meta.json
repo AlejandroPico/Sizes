@@ -1,0 +1,45 @@
+{
+  "id": "country-450",
+  "canonicalName": "Madagascar",
+  "names": {
+    "en": "Madagascar",
+    "es": "Madagascar"
+  },
+  "category": "geography",
+  "family": "countries",
+  "featured": false,
+  "dimensions": {
+    "width": 760681.3938502583,
+    "height": 1505804.0467069643,
+    "depth": null
+  },
+  "basis": "equal-area-map-extent",
+  "measurementStatus": "derived",
+  "source": "https://github.com/topojson/world-atlas",
+  "properties": {
+    "area": {
+      "value": 591060708054.9487,
+      "unit": "m²"
+    }
+  },
+  "summary": {
+    "es": "Contorno cartográfico Natural Earth de baja resolución. Proyección azimutal equivalente centrada en el territorio: conserva superficies, pero las longitudes y el contorno proyectados se distorsionan. No representa distancias geodésicas exactas. La superficie incluye los polígonos del conjunto de datos, no una cifra administrativa oficial.",
+    "en": "Low-resolution Natural Earth boundary. Locally centered azimuthal equal-area projection preserves areas but distorts projected lengths and outlines. It does not show exact geodesic distances. Area is derived from dataset polygons, not official administrative statistics."
+  },
+  "visual": {
+    "kind": "map",
+    "fidelity": "cartographic",
+    "silhouette": "silhouette.svg",
+    "model": null
+  },
+  "folder": "Madagascar",
+  "tags": [
+    "geography",
+    "countries"
+  ],
+  "color": "#91c7b6",
+  "environment": "geography",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12"
+}

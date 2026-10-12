@@ -1,0 +1,9 @@
+{
+  "type": "ship",
+  "dimensions": {
+    "width": 365,
+    "height": 65,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

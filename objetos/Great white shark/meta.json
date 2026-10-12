@@ -1,0 +1,39 @@
+{
+  "id": "white-shark",
+  "names": {
+    "es": "Tiburón blanco",
+    "en": "Great white shark"
+  },
+  "category": "life",
+  "family": "fish",
+  "featured": true,
+  "dimensions": {
+    "width": 6,
+    "height": 1.8,
+    "depth": null
+  },
+  "shape": "shark",
+  "basis": "representative-length",
+  "color": "#d4c4a1",
+  "folder": "Great white shark",
+  "tags": [
+    "life",
+    "fish"
+  ],
+  "environment": "ocean",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Ejemplo adulto representativo. El tamaño cambia entre individuos, sexos y poblaciones. La silueta es una ilustración, no una fotografía ni una reconstrucción anatómica.",
+    "en": "A representative adult example. Size varies between individuals, sexes and populations. The silhouette is an illustration, not a photograph or anatomical reconstruction."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://www.fisheries.noaa.gov/species/blue-whale",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "shark",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "carbon",
+  "names": {
+    "es": "Átomo de carbono",
+    "en": "Carbon atom"
+  },
+  "category": "quantum",
+  "family": "atoms",
+  "featured": true,
+  "dimensions": {
+    "width": 1.52e-10,
+    "height": 1.52e-10,
+    "depth": null
+  },
+  "shape": "sphere",
+  "basis": "covalent-diameter",
+  "color": "#bcabed",
+  "folder": "Carbon atom",
+  "tags": [
+    "quantum",
+    "atoms"
+  ],
+  "environment": "quantum",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Escala de referencia definida por el modelo indicado; no representa una bola sólida fotografiada.",
+    "en": "Reference scale defined by the stated model; it does not represent a photographed solid ball."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://physics.nist.gov/cuu/Constants/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tower",
+  "dimensions": {
+    "width": 180,
+    "height": 828,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

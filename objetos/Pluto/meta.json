@@ -1,0 +1,49 @@
+{
+  "id": "pluto",
+  "names": {
+    "es": "Plutón",
+    "en": "Pluto",
+    "ca": "Plutó"
+  },
+  "category": "space",
+  "family": "dwarf-planets",
+  "featured": true,
+  "dimensions": {
+    "width": 2376000,
+    "height": 2376000,
+    "depth": 2376000
+  },
+  "basis": "equatorial-diameter",
+  "measurementStatus": "measured",
+  "properties": {
+    "density": {
+      "value": 1850,
+      "unit": "kg/m³"
+    }
+  },
+  "color": "#aabcc9",
+  "summary": {
+    "es": "Plutón. Se compara su diámetro ecuatorial. La superficie corresponde a observaciones cuando hay textura; no se inventa detalle en zonas sin cartografía.",
+    "en": "Pluto. The comparison uses equatorial diameter. Observed surface assets are used where available; unmapped detail is not invented."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "partial-map",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": null,
+    "clouds": null,
+    "glb": "model.glb",
+    "rings": null
+  },
+  "folder": "Pluto",
+  "tags": [
+    "space",
+    "dwarf-planets"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

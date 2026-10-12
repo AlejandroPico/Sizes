@@ -1,0 +1,39 @@
+{
+  "id": "transistor",
+  "names": {
+    "es": "Transistor de referencia (20 nm)",
+    "en": "Reference transistor (20 nm)"
+  },
+  "category": "quantum",
+  "family": "technology",
+  "featured": true,
+  "dimensions": {
+    "width": 2e-8,
+    "height": 2e-8,
+    "depth": null
+  },
+  "shape": "square",
+  "basis": "illustrative-length",
+  "color": "#bcabed",
+  "folder": "Reference transistor (20 nm)",
+  "tags": [
+    "quantum",
+    "technology"
+  ],
+  "environment": "quantum",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Escala de referencia definida por el modelo indicado; no representa una bola sólida fotografiada.",
+    "en": "Reference scale defined by the stated model; it does not represent a photographed solid ball."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://physics.nist.gov/cuu/Constants/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "square",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "classical-electron-radius",
+  "names": {
+    "es": "Radio clásico del electrón",
+    "en": "Classical electron radius"
+  },
+  "category": "quantum",
+  "family": "reference",
+  "featured": true,
+  "dimensions": {
+    "width": 2.8179403262e-15,
+    "height": 2.8179403262e-15,
+    "depth": null
+  },
+  "shape": "line",
+  "basis": "reference-length",
+  "color": "#bcabed",
+  "measurementStatus": "model-defined",
+  "folder": "Classical electron radius",
+  "tags": [
+    "quantum",
+    "reference"
+  ],
+  "environment": "quantum",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Escala de referencia definida por el modelo indicado; no representa una bola sólida fotografiada.",
+    "en": "Reference scale defined by the stated model; it does not represent a photographed solid ball."
+  },
+  "status": "ready",
+  "source": "https://physics.nist.gov/cuu/Constants/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "line",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

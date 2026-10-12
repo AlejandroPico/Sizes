@@ -1,0 +1,35 @@
+{
+  "id": "electron",
+  "names": {
+    "es": "Electrón",
+    "en": "Electron"
+  },
+  "category": "quantum",
+  "family": "particles",
+  "featured": true,
+  "dimensions": null,
+  "shape": "sphere",
+  "basis": "point-particle",
+  "color": "#bcabed",
+  "measurementStatus": "unknown",
+  "summary": {
+    "es": "El electrón se modela como partícula puntual. No tiene un diámetro medido que podamos dibujar. El radio clásico del electrón es una escala de una fórmula, no el radio físico del electrón.",
+    "en": "The electron is modeled as a point particle. There is no measured diameter to draw. The classical electron radius is a formula-derived scale, not the physical electron radius."
+  },
+  "folder": "Electron",
+  "tags": [
+    "quantum",
+    "particles"
+  ],
+  "environment": "quantum",
+  "reviewStatus": "initial",
+  "status": "pending",
+  "source": "https://physics.nist.gov/cuu/Constants/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

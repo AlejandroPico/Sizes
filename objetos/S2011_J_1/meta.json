@@ -1,0 +1,48 @@
+{
+  "id": "s2011_j_1",
+  "names": {
+    "es": "S2011_J_1",
+    "en": "S2011_J_1"
+  },
+  "category": "space",
+  "family": "moons",
+  "parent": "jupiter",
+  "featured": false,
+  "dimensions": null,
+  "basis": "mean-diameter",
+  "measurementStatus": "unknown",
+  "source": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+  "provenance": {
+    "importedFrom": "AlejandroPico/Universal/src/moon-catalog.json",
+    "originalSource": "JPL · elementos medios JUP347",
+    "naif": 572
+  },
+  "properties": {
+    "parent": {
+      "value": "jupiter",
+      "unit": ""
+    }
+  },
+  "summary": {
+    "es": "Satélite natural de jupiter. El catálogo de origen no proporciona una medida utilizable: queda pendiente y no se dibuja a una escala inventada.",
+    "en": "Natural satellite of jupiter. The source catalog has no usable dimension: pending, with no invented comparison scale."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": null,
+    "glb": null
+  },
+  "folder": "S2011_J_1",
+  "tags": [
+    "space",
+    "moons"
+  ],
+  "color": "#aabcc9",
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "pending",
+  "sourceRetrieved": "2026-10-12"
+}

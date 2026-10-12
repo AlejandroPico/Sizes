@@ -1,0 +1,49 @@
+{
+  "id": "neptune",
+  "names": {
+    "es": "Neptuno",
+    "en": "Neptune",
+    "ca": "Neptú"
+  },
+  "category": "space",
+  "family": "planets",
+  "featured": true,
+  "dimensions": {
+    "width": 49528000,
+    "height": 49528000,
+    "depth": 49528000
+  },
+  "basis": "equatorial-diameter",
+  "measurementStatus": "measured",
+  "properties": {
+    "density": {
+      "value": 1638,
+      "unit": "kg/m³"
+    }
+  },
+  "color": "#5785d6",
+  "summary": {
+    "es": "Neptuno. Se compara su diámetro ecuatorial. La superficie corresponde a observaciones cuando hay textura; no se inventa detalle en zonas sin cartografía.",
+    "en": "Neptune. The comparison uses equatorial diameter. Observed surface assets are used where available; unmapped detail is not invented."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg",
+    "clouds": null,
+    "glb": null,
+    "rings": null
+  },
+  "folder": "Neptune",
+  "tags": [
+    "space",
+    "planets"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

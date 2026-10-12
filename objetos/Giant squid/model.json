@@ -1,0 +1,9 @@
+{
+  "type": "squid",
+  "dimensions": {
+    "width": 12,
+    "height": 2,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-12",
+  "moons": 459,
+  "source": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+  "importedFrom": "AlejandroPico/Universal",
+  "countries": 177,
+  "countryDataset": "world-atlas 2.0.2 / Natural Earth 1:110m",
+  "notes": "Unknown moon radii kept null. No placeholder radii imported as measured sizes."
+}

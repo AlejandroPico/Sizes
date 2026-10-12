@@ -1,0 +1,49 @@
+{
+  "id": "mars",
+  "names": {
+    "es": "Marte",
+    "en": "Mars",
+    "ca": "Mart"
+  },
+  "category": "space",
+  "family": "planets",
+  "featured": true,
+  "dimensions": {
+    "width": 6792000,
+    "height": 6792000,
+    "depth": 6792000
+  },
+  "basis": "equatorial-diameter",
+  "measurementStatus": "measured",
+  "properties": {
+    "density": {
+      "value": 3934,
+      "unit": "kg/m³"
+    }
+  },
+  "color": "#d48969",
+  "summary": {
+    "es": "Marte. Se compara su diámetro ecuatorial. La superficie corresponde a observaciones cuando hay textura; no se inventa detalle en zonas sin cartografía.",
+    "en": "Mars. The comparison uses equatorial diameter. Observed surface assets are used where available; unmapped detail is not invented."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg",
+    "clouds": null,
+    "glb": null,
+    "rings": null
+  },
+  "folder": "Mars",
+  "tags": [
+    "space",
+    "planets"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

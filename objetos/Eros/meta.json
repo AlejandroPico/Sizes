@@ -1,0 +1,39 @@
+{
+  "id": "eros",
+  "names": {
+    "es": "Eros",
+    "en": "Eros"
+  },
+  "category": "space",
+  "family": "asteroids",
+  "featured": true,
+  "dimensions": {
+    "width": 34400,
+    "height": 11200,
+    "depth": 11200
+  },
+  "shape": "sphere",
+  "basis": "principal-axes",
+  "color": "#aabcc9",
+  "measurementStatus": "estimated",
+  "summary": {
+    "es": "Escala astronómica aproximada. El valor depende de la definición del borde y del modelo de medida indicado en esta ficha.",
+    "en": "Approximate astronomical scale. The value depends on the boundary definition and the measurement model stated in this entry."
+  },
+  "source": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html",
+  "folder": "Eros",
+  "tags": [
+    "space",
+    "asteroids"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

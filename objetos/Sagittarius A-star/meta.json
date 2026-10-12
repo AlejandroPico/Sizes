@@ -1,0 +1,39 @@
+{
+  "id": "sagittarius-a",
+  "names": {
+    "es": "Sagitario A*",
+    "en": "Sagittarius A*"
+  },
+  "category": "space",
+  "family": "black-holes",
+  "featured": true,
+  "dimensions": {
+    "width": 23600000000,
+    "height": 23600000000,
+    "depth": 23600000000
+  },
+  "shape": "sphere",
+  "basis": "schwarzschild-diameter",
+  "color": "#aabcc9",
+  "measurementStatus": "estimated",
+  "summary": {
+    "es": "Escala astronómica aproximada. El valor depende de la definición del borde y del modelo de medida indicado en esta ficha.",
+    "en": "Approximate astronomical scale. The value depends on the boundary definition and the measurement model stated in this entry."
+  },
+  "folder": "Sagittarius A-star",
+  "tags": [
+    "space",
+    "black-holes"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

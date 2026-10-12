@@ -1,0 +1,9 @@
+{
+  "type": "sphere",
+  "dimensions": {
+    "width": 19999.999999999996,
+    "height": 19999.999999999996,
+    "depth": 19999.999999999996
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

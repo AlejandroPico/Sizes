@@ -1,0 +1,45 @@
+{
+  "id": "country-434",
+  "canonicalName": "Libya",
+  "names": {
+    "en": "Libya",
+    "es": "Libya"
+  },
+  "category": "geography",
+  "family": "countries",
+  "featured": false,
+  "dimensions": {
+    "width": 1597612.3415265786,
+    "height": 1510116.1884369557,
+    "depth": null
+  },
+  "basis": "equal-area-map-extent",
+  "measurementStatus": "derived",
+  "source": "https://github.com/topojson/world-atlas",
+  "properties": {
+    "area": {
+      "value": 1636662908623.4836,
+      "unit": "m²"
+    }
+  },
+  "summary": {
+    "es": "Contorno cartográfico Natural Earth de baja resolución. Proyección azimutal equivalente centrada en el territorio: conserva superficies, pero las longitudes y el contorno proyectados se distorsionan. No representa distancias geodésicas exactas. La superficie incluye los polígonos del conjunto de datos, no una cifra administrativa oficial.",
+    "en": "Low-resolution Natural Earth boundary. Locally centered azimuthal equal-area projection preserves areas but distorts projected lengths and outlines. It does not show exact geodesic distances. Area is derived from dataset polygons, not official administrative statistics."
+  },
+  "visual": {
+    "kind": "map",
+    "fidelity": "cartographic",
+    "silhouette": "silhouette.svg",
+    "model": null
+  },
+  "folder": "Libya",
+  "tags": [
+    "geography",
+    "countries"
+  ],
+  "color": "#91c7b6",
+  "environment": "geography",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "jupiter",
+  "names": {
+    "es": "Júpiter",
+    "en": "Jupiter",
+    "ca": "Júpiter"
+  },
+  "category": "space",
+  "family": "planets",
+  "featured": true,
+  "dimensions": {
+    "width": 142984000,
+    "height": 142984000,
+    "depth": 142984000
+  },
+  "basis": "equatorial-diameter",
+  "measurementStatus": "measured",
+  "properties": {
+    "density": {
+      "value": 1326,
+      "unit": "kg/m³"
+    }
+  },
+  "color": "#d7b89b",
+  "summary": {
+    "es": "Júpiter. Se compara su diámetro ecuatorial. La superficie corresponde a observaciones cuando hay textura; no se inventa detalle en zonas sin cartografía.",
+    "en": "Jupiter. The comparison uses equatorial diameter. Observed surface assets are used where available; unmapped detail is not invented."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg",
+    "clouds": null,
+    "glb": null,
+    "rings": null
+  },
+  "folder": "Jupiter",
+  "tags": [
+    "space",
+    "planets"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

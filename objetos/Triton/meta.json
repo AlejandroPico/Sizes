@@ -1,0 +1,52 @@
+{
+  "id": "triton",
+  "names": {
+    "es": "Tritón",
+    "en": "Triton"
+  },
+  "category": "space",
+  "family": "moons",
+  "parent": "neptune",
+  "featured": true,
+  "dimensions": {
+    "width": 2705199.999999999,
+    "height": 2705199.999999999,
+    "depth": 2705199.999999999
+  },
+  "basis": "mean-diameter",
+  "measurementStatus": "estimated",
+  "source": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+  "provenance": {
+    "importedFrom": "AlejandroPico/Universal/src/moon-catalog.json",
+    "originalSource": "JPL · elementos medios NEP097",
+    "naif": 801
+  },
+  "properties": {
+    "parent": {
+      "value": "neptune",
+      "unit": ""
+    }
+  },
+  "summary": {
+    "es": "Satélite natural de neptune. Dimensiones del catálogo JPL importado de Universal. Una figura sin mapa es una aproximación, no una superficie observada.",
+    "en": "Natural satellite of neptune. Dimensions from the JPL catalog imported from Universal. An unmapped shape is an approximation, not an observed surface."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg",
+    "glb": null
+  },
+  "folder": "Triton",
+  "tags": [
+    "space",
+    "moons"
+  ],
+  "color": "#aabcc9",
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12"
+}

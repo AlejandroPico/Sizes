@@ -1,0 +1,45 @@
+{
+  "id": "country-784",
+  "canonicalName": "United Arab Emirates",
+  "names": {
+    "en": "United Arab Emirates",
+    "es": "United Arab Emirates"
+  },
+  "category": "geography",
+  "family": "countries",
+  "featured": false,
+  "dimensions": {
+    "width": 487117.9121554403,
+    "height": 396805.3711937824,
+    "depth": null
+  },
+  "basis": "equal-area-map-extent",
+  "measurementStatus": "derived",
+  "source": "https://github.com/topojson/world-atlas",
+  "properties": {
+    "area": {
+      "value": 80036512612.27237,
+      "unit": "m²"
+    }
+  },
+  "summary": {
+    "es": "Contorno cartográfico Natural Earth de baja resolución. Proyección azimutal equivalente centrada en el territorio: conserva superficies, pero las longitudes y el contorno proyectados se distorsionan. No representa distancias geodésicas exactas. La superficie incluye los polígonos del conjunto de datos, no una cifra administrativa oficial.",
+    "en": "Low-resolution Natural Earth boundary. Locally centered azimuthal equal-area projection preserves areas but distorts projected lengths and outlines. It does not show exact geodesic distances. Area is derived from dataset polygons, not official administrative statistics."
+  },
+  "visual": {
+    "kind": "map",
+    "fidelity": "cartographic",
+    "silhouette": "silhouette.svg",
+    "model": null
+  },
+  "folder": "United Arab Emirates",
+  "tags": [
+    "geography",
+    "countries"
+  ],
+  "color": "#91c7b6",
+  "environment": "geography",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "influenza",
+  "names": {
+    "es": "Virus de la gripe",
+    "en": "Influenza virus"
+  },
+  "category": "micro",
+  "family": "viruses",
+  "featured": true,
+  "dimensions": {
+    "width": 1e-7,
+    "height": 1e-7,
+    "depth": null
+  },
+  "shape": "virus",
+  "basis": "representative-diameter",
+  "color": "#92d7bf",
+  "folder": "Influenza virus",
+  "tags": [
+    "micro",
+    "viruses"
+  ],
+  "environment": "micro",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Escala representativa de una estructura biológica. La forma y las dimensiones pueden variar; el dibujo es esquemático.",
+    "en": "Representative scale of a biological structure. Shape and dimensions may vary; the drawing is schematic."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://www.ncbi.nlm.nih.gov/books/NBK26880/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "virus",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

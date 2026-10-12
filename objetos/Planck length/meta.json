@@ -1,0 +1,39 @@
+{
+  "id": "planck-length",
+  "names": {
+    "es": "Longitud de Planck",
+    "en": "Planck length"
+  },
+  "category": "quantum",
+  "family": "reference",
+  "featured": true,
+  "dimensions": {
+    "width": 1.616255e-35,
+    "height": 1.616255e-35,
+    "depth": null
+  },
+  "shape": "line",
+  "basis": "reference-length",
+  "color": "#bcabed",
+  "measurementStatus": "model-defined",
+  "folder": "Planck length",
+  "tags": [
+    "quantum",
+    "reference"
+  ],
+  "environment": "quantum",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Escala de referencia definida por el modelo indicado; no representa una bola sólida fotografiada.",
+    "en": "Reference scale defined by the stated model; it does not represent a photographed solid ball."
+  },
+  "status": "ready",
+  "source": "https://physics.nist.gov/cuu/Constants/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "line",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

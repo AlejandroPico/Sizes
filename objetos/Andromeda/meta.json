@@ -1,0 +1,39 @@
+{
+  "id": "andromeda",
+  "names": {
+    "es": "Andrómeda",
+    "en": "Andromeda"
+  },
+  "category": "space",
+  "family": "galaxies",
+  "featured": true,
+  "dimensions": {
+    "width": 2.08e+21,
+    "height": 2.08e+21,
+    "depth": null
+  },
+  "shape": "galaxy",
+  "basis": "stellar-disc-diameter",
+  "color": "#aabcc9",
+  "measurementStatus": "estimated",
+  "summary": {
+    "es": "Escala astronómica aproximada. El valor depende de la definición del borde y del modelo de medida indicado en esta ficha.",
+    "en": "Approximate astronomical scale. The value depends on the boundary definition and the measurement model stated in this entry."
+  },
+  "folder": "Andromeda",
+  "tags": [
+    "space",
+    "galaxies"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "galaxy",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

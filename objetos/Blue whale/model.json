@@ -1,0 +1,9 @@
+{
+  "type": "whale",
+  "dimensions": {
+    "width": 30,
+    "height": 6,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

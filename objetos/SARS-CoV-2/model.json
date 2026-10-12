@@ -1,0 +1,9 @@
+{
+  "type": "virus",
+  "dimensions": {
+    "width": 1e-7,
+    "height": 1e-7,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

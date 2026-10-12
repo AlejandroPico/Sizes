@@ -1,0 +1,39 @@
+{
+  "id": "iss",
+  "names": {
+    "es": "Estación Espacial Internacional",
+    "en": "International Space Station"
+  },
+  "category": "objects",
+  "family": "spacecraft",
+  "featured": true,
+  "dimensions": {
+    "width": 109,
+    "height": 73,
+    "depth": null
+  },
+  "shape": "field",
+  "basis": "maximum-extent",
+  "color": "#c9d8e0",
+  "folder": "International Space Station",
+  "tags": [
+    "objects",
+    "spacecraft"
+  ],
+  "environment": "neutral",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Dimensiones del objeto o de un ejemplo de referencia. El dibujo es una representación ilustrativa.",
+    "en": "Dimensions of the object or a reference example. The drawing is an illustrative representation."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://www.royalcaribbeanpresscenter.com/fact_sheets/Icon_of_the_Seas_Fact_Sheet.pdf",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "field",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

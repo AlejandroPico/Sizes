@@ -1,0 +1,40 @@
+{
+  "id": "eiffel",
+  "names": {
+    "es": "Torre Eiffel",
+    "en": "Eiffel Tower"
+  },
+  "category": "buildings",
+  "family": "towers",
+  "featured": true,
+  "dimensions": {
+    "width": 125,
+    "height": 330,
+    "depth": null
+  },
+  "shape": "eiffel",
+  "basis": "total-height",
+  "color": "#c5d1d6",
+  "source": "https://www.toureiffel.paris/en/the-monument/key-figures",
+  "visual": {
+    "kind": "eiffel",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "schematicWidth": true
+  },
+  "folder": "Eiffel Tower",
+  "tags": [
+    "buildings",
+    "towers"
+  ],
+  "environment": "buildings",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "La comparación usa altura arquitectónica; la anchura de la ilustración es esquemática y no se utiliza como medida publicada.",
+    "en": "The comparison uses architectural height; illustration width is schematic and is not used as a published measurement."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "sourceRetrieved": "2026-10-12"
+}

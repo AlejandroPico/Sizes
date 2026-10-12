@@ -1,0 +1,52 @@
+{
+  "id": "charon",
+  "names": {
+    "es": "Charon",
+    "en": "Charon"
+  },
+  "category": "space",
+  "family": "moons",
+  "parent": "pluto",
+  "featured": false,
+  "dimensions": {
+    "width": 1211999.9999999995,
+    "height": 1211999.9999999995,
+    "depth": 1211999.9999999995
+  },
+  "basis": "mean-diameter",
+  "measurementStatus": "estimated",
+  "source": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+  "provenance": {
+    "importedFrom": "AlejandroPico/Universal/src/moon-catalog.json",
+    "originalSource": "JPL · elementos medios PLU060",
+    "naif": 901
+  },
+  "properties": {
+    "parent": {
+      "value": "pluto",
+      "unit": ""
+    }
+  },
+  "summary": {
+    "es": "Satélite natural de pluto. Dimensiones del catálogo JPL importado de Universal. Una figura sin mapa es una aproximación, no una superficie observada.",
+    "en": "Natural satellite of pluto. Dimensions from the JPL catalog imported from Universal. An unmapped shape is an approximation, not an observed surface."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "reconstructed",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": null,
+    "glb": "model.glb"
+  },
+  "folder": "Charon",
+  "tags": [
+    "space",
+    "moons"
+  ],
+  "color": "#aabcc9",
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12"
+}

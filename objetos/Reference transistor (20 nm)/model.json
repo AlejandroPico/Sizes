@@ -1,0 +1,9 @@
+{
+  "type": "square",
+  "dimensions": {
+    "width": 2e-8,
+    "height": 2e-8,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

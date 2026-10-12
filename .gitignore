@@ -1,0 +1,8 @@
+node_modules/
+dist/
+public/objetos/
+public/catalog.sqlite
+public/AGENTS.md
+public/sql-wasm.wasm
+test-results/
+.DS_Store

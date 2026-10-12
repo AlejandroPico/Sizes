@@ -1,0 +1,39 @@
+{
+  "id": "a380",
+  "names": {
+    "es": "Airbus A380",
+    "en": "Airbus A380"
+  },
+  "category": "objects",
+  "family": "aircraft",
+  "featured": true,
+  "dimensions": {
+    "width": 79.75,
+    "height": 72.72,
+    "depth": null
+  },
+  "shape": "plane",
+  "basis": "wingspan",
+  "color": "#c9d8e0",
+  "folder": "Airbus A380",
+  "tags": [
+    "objects",
+    "aircraft"
+  ],
+  "environment": "neutral",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Dimensiones del objeto o de un ejemplo de referencia. El dibujo es una representación ilustrativa.",
+    "en": "Dimensions of the object or a reference example. The drawing is an illustrative representation."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://www.royalcaribbeanpresscenter.com/fact_sheets/Icon_of_the_Seas_Fact_Sheet.pdf",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "plane",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "ellipsoid",
+  "dimensions": {
+    "width": 20000,
+    "height": 16000,
+    "depth": 14000
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "saturn",
+  "names": {
+    "es": "Saturno",
+    "en": "Saturn",
+    "ca": "Saturn"
+  },
+  "category": "space",
+  "family": "planets",
+  "featured": true,
+  "dimensions": {
+    "width": 120536000,
+    "height": 120536000,
+    "depth": 120536000
+  },
+  "basis": "equatorial-diameter",
+  "measurementStatus": "measured",
+  "properties": {
+    "density": {
+      "value": 687,
+      "unit": "kg/m³"
+    }
+  },
+  "color": "#e0cb9f",
+  "summary": {
+    "es": "Saturno. Se compara su diámetro ecuatorial. La superficie corresponde a observaciones cuando hay textura; no se inventa detalle en zonas sin cartografía.",
+    "en": "Saturn. The comparison uses equatorial diameter. Observed surface assets are used where available; unmapped detail is not invented."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg",
+    "clouds": null,
+    "glb": null,
+    "rings": {
+      "outerDiameter": 273560000,
+      "innerDiameter": 149316000
+    }
+  },
+  "folder": "Saturn",
+  "tags": [
+    "space",
+    "planets"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

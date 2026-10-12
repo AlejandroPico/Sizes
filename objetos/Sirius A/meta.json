@@ -1,0 +1,39 @@
+{
+  "id": "sirius",
+  "names": {
+    "es": "Sirio A",
+    "en": "Sirius A"
+  },
+  "category": "space",
+  "family": "stars",
+  "featured": true,
+  "dimensions": {
+    "width": 2380000000,
+    "height": 2380000000,
+    "depth": 2380000000
+  },
+  "shape": "sphere",
+  "basis": "mean-diameter",
+  "color": "#aabcc9",
+  "measurementStatus": "estimated",
+  "summary": {
+    "es": "Escala astronómica aproximada. El valor depende de la definición del borde y del modelo de medida indicado en esta ficha.",
+    "en": "Approximate astronomical scale. The value depends on the boundary definition and the measurement model stated in this entry."
+  },
+  "folder": "Sirius A",
+  "tags": [
+    "space",
+    "stars"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

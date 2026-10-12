@@ -1,0 +1,9 @@
+{
+  "type": "shark",
+  "dimensions": {
+    "width": 16,
+    "height": 4,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

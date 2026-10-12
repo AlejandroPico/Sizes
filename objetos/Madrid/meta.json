@@ -1,0 +1,45 @@
+{
+  "id": "madrid",
+  "names": {
+    "es": "Madrid",
+    "en": "Madrid"
+  },
+  "category": "geography",
+  "family": "cities",
+  "featured": true,
+  "dimensions": {
+    "width": 24582.51411064377,
+    "height": 24582.51411064377,
+    "depth": null
+  },
+  "basis": "equivalent-area-square",
+  "shape": "square",
+  "source": "https://www.madrid.es/",
+  "measurementStatus": "estimated",
+  "properties": {
+    "area": {
+      "value": 604300000,
+      "unit": "m²"
+    }
+  },
+  "summary": {
+    "es": "Cuadrado de superficie equivalente, no contorno real de la ciudad. La definición territorial aparece en el nombre. No se infieren población ni altura media de edificios; hacen falta fuentes y fechas compatibles para añadir esos datos.",
+    "en": "Equivalent-area square, not the actual city outline. The territorial definition is included in the name. Population and average building height are not inferred; compatible sources and dates are needed to add them."
+  },
+  "folder": "Madrid",
+  "tags": [
+    "geography",
+    "cities"
+  ],
+  "color": "#91c7b6",
+  "environment": "geography",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "square",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

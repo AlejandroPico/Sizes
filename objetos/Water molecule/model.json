@@ -1,0 +1,9 @@
+{
+  "type": "molecule",
+  "dimensions": {
+    "width": 2.75e-10,
+    "height": 2.75e-10,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

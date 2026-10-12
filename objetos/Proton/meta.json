@@ -1,0 +1,39 @@
+{
+  "id": "proton",
+  "names": {
+    "es": "Protón",
+    "en": "Proton"
+  },
+  "category": "quantum",
+  "family": "particles",
+  "featured": true,
+  "dimensions": {
+    "width": 1.68e-15,
+    "height": 1.68e-15,
+    "depth": null
+  },
+  "shape": "sphere",
+  "basis": "charge-diameter",
+  "color": "#bcabed",
+  "folder": "Proton",
+  "tags": [
+    "quantum",
+    "particles"
+  ],
+  "environment": "quantum",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Escala de referencia definida por el modelo indicado; no representa una bola sólida fotografiada.",
+    "en": "Reference scale defined by the stated model; it does not represent a photographed solid ball."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://physics.nist.gov/cuu/Constants/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

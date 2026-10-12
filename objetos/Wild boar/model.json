@@ -1,0 +1,9 @@
+{
+  "type": "dog",
+  "dimensions": {
+    "width": 1.5,
+    "height": 0.85,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

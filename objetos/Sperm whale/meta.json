@@ -1,0 +1,39 @@
+{
+  "id": "sperm-whale",
+  "names": {
+    "es": "Cachalote",
+    "en": "Sperm whale"
+  },
+  "category": "life",
+  "family": "whales",
+  "featured": true,
+  "dimensions": {
+    "width": 18,
+    "height": 4,
+    "depth": null
+  },
+  "shape": "whale",
+  "basis": "representative-length",
+  "color": "#d4c4a1",
+  "folder": "Sperm whale",
+  "tags": [
+    "life",
+    "whales"
+  ],
+  "environment": "ocean",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Ejemplo adulto representativo. El tamaño cambia entre individuos, sexos y poblaciones. La silueta es una ilustración, no una fotografía ni una reconstrucción anatómica.",
+    "en": "A representative adult example. Size varies between individuals, sexes and populations. The silhouette is an illustration, not a photograph or anatomical reconstruction."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "source": "https://www.fisheries.noaa.gov/species/blue-whale",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "whale",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

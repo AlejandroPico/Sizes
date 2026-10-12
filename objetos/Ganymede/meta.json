@@ -1,0 +1,52 @@
+{
+  "id": "ganymede",
+  "names": {
+    "es": "Ganímedes",
+    "en": "Ganymede"
+  },
+  "category": "space",
+  "family": "moons",
+  "parent": "jupiter",
+  "featured": true,
+  "dimensions": {
+    "width": 5262399.999999998,
+    "height": 5262399.999999998,
+    "depth": 5262399.999999998
+  },
+  "basis": "mean-diameter",
+  "measurementStatus": "estimated",
+  "source": "https://ssd.jpl.nasa.gov/sats/phys_par/",
+  "provenance": {
+    "importedFrom": "AlejandroPico/Universal/src/moon-catalog.json",
+    "originalSource": "JPL · elementos medios JUP365",
+    "naif": 503
+  },
+  "properties": {
+    "parent": {
+      "value": "jupiter",
+      "unit": ""
+    }
+  },
+  "summary": {
+    "es": "Satélite natural de jupiter. Dimensiones del catálogo JPL importado de Universal. Una figura sin mapa es una aproximación, no una superficie observada.",
+    "en": "Natural satellite of jupiter. Dimensions from the JPL catalog imported from Universal. An unmapped shape is an approximation, not an observed surface."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg",
+    "glb": null
+  },
+  "folder": "Ganymede",
+  "tags": [
+    "space",
+    "moons"
+  ],
+  "color": "#aabcc9",
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "sourceRetrieved": "2026-10-12"
+}

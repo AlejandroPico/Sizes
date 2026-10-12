@@ -1,0 +1,9 @@
+{
+  "type": "bacterium",
+  "dimensions": {
+    "width": 0.000002,
+    "height": 5e-7,
+    "depth": null
+  },
+  "representation": "procedural illustration, not a measured surface"
+}

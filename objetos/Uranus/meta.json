@@ -1,0 +1,49 @@
+{
+  "id": "uranus",
+  "names": {
+    "es": "Urano",
+    "en": "Uranus",
+    "ca": "Urà"
+  },
+  "category": "space",
+  "family": "planets",
+  "featured": true,
+  "dimensions": {
+    "width": 51118000,
+    "height": 51118000,
+    "depth": 51118000
+  },
+  "basis": "equatorial-diameter",
+  "measurementStatus": "measured",
+  "properties": {
+    "density": {
+      "value": 1270,
+      "unit": "kg/m³"
+    }
+  },
+  "color": "#8bd2d8",
+  "summary": {
+    "es": "Urano. Se compara su diámetro ecuatorial. La superficie corresponde a observaciones cuando hay textura; no se inventa detalle en zonas sin cartografía.",
+    "en": "Uranus. The comparison uses equatorial diameter. Observed surface assets are used where available; unmapped detail is not invented."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": null,
+    "clouds": null,
+    "glb": "model.glb",
+    "rings": null
+  },
+  "folder": "Uranus",
+  "tags": [
+    "space",
+    "planets"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

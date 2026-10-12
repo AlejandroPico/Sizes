@@ -1,0 +1,40 @@
+{
+  "id": "sun",
+  "names": {
+    "es": "Sol",
+    "en": "Sun",
+    "ca": "Sol"
+  },
+  "category": "space",
+  "family": "stars",
+  "featured": true,
+  "dimensions": {
+    "width": 1392680000,
+    "height": 1392680000,
+    "depth": 1392680000
+  },
+  "basis": "mean-diameter",
+  "measurementStatus": "measured",
+  "color": "#ffb16c",
+  "summary": {
+    "es": "La estrella del Sistema Solar. La textura procede de observaciones solares. La corona y las protuberancias animadas son una ilustración; no muestran actividad solar en directo.",
+    "en": "The star of the Solar System. Texture derived from solar observations. The animated corona and prominences are illustrative, not live solar activity."
+  },
+  "visual": {
+    "kind": "sphere",
+    "fidelity": "observed-texture",
+    "silhouette": "silhouette.svg",
+    "model": "model.json",
+    "texture": "texture.jpg"
+  },
+  "folder": "Sun",
+  "tags": [
+    "space",
+    "stars"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12"
+}

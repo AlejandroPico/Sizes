@@ -1,0 +1,39 @@
+{
+  "id": "milky-way",
+  "names": {
+    "es": "Vía Láctea",
+    "en": "Milky Way"
+  },
+  "category": "space",
+  "family": "galaxies",
+  "featured": true,
+  "dimensions": {
+    "width": 946070000000000000000,
+    "height": 946070000000000000000,
+    "depth": null
+  },
+  "shape": "galaxy",
+  "basis": "stellar-disc-diameter",
+  "color": "#aabcc9",
+  "measurementStatus": "estimated",
+  "summary": {
+    "es": "Escala astronómica aproximada. El valor depende de la definición del borde y del modelo de medida indicado en esta ficha.",
+    "en": "Approximate astronomical scale. The value depends on the boundary definition and the measurement model stated in this entry."
+  },
+  "folder": "Milky Way",
+  "tags": [
+    "space",
+    "galaxies"
+  ],
+  "environment": "space",
+  "reviewStatus": "initial",
+  "status": "ready",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "galaxy",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}

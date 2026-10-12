@@ -1,0 +1,39 @@
+{
+  "id": "giraffe",
+  "names": {
+    "es": "Jirafa",
+    "en": "Giraffe"
+  },
+  "category": "life",
+  "family": "mammals",
+  "featured": true,
+  "dimensions": {
+    "width": 3.5,
+    "height": 5.5,
+    "depth": null
+  },
+  "shape": "giraffe",
+  "basis": "representative-height",
+  "color": "#d4c4a1",
+  "source": "https://www.nationalzoo.si.edu/animals",
+  "folder": "Giraffe",
+  "tags": [
+    "life",
+    "mammals"
+  ],
+  "environment": "savanna",
+  "reviewStatus": "initial",
+  "summary": {
+    "es": "Ejemplo adulto representativo. El tamaño cambia entre individuos, sexos y poblaciones. La silueta es una ilustración, no una fotografía ni una reconstrucción anatómica.",
+    "en": "A representative adult example. Size varies between individuals, sexes and populations. The silhouette is an illustration, not a photograph or anatomical reconstruction."
+  },
+  "status": "ready",
+  "measurementStatus": "representative",
+  "sourceRetrieved": "2026-10-12",
+  "visual": {
+    "kind": "giraffe",
+    "fidelity": "illustrative",
+    "silhouette": "silhouette.svg",
+    "model": "model.json"
+  }
+}
