@@ -28,12 +28,36 @@
   },
   "status": "ready",
   "measurementStatus": "representative",
-  "source": "https://www.royalcaribbeanpresscenter.com/fact_sheets/Icon_of_the_Seas_Fact_Sheet.pdf",
-  "sourceRetrieved": "2026-10-12",
+  "source": "https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a380",
+  "sourceRetrieved": "2026-10-13",
   "visual": {
     "kind": "plane",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "image": "image.png",
+    "imageBounds": {
+      "x": 6,
+      "y": 11,
+      "width": 1300,
+      "height": 1162,
+      "imageWidth": 1312,
+      "imageHeight": 1199
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-13",
+      "observed": false,
+      "promptFile": "data/image-prompts-0.3.json",
+      "referenceUrls": [
+        "https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a380"
+      ],
+      "notes": "Ilustración generada con detalles interpretativos. No fotografía observada, levantamiento técnico ni reproducción exacta de cada detalle."
+    },
+    "note": {
+      "es": "Vista de conjunto orientada según los ejes del catálogo. La ilustración generada contiene detalles interpretativos; no es una fotografía observada, un escaneo ni un plano de ingeniería.",
+      "en": "Overview aligned with catalogue axes. This generated illustration includes interpretive details; it is not an observed photograph, scan or engineering drawing."
+    }
   }
 }

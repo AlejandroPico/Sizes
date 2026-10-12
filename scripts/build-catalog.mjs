@@ -30,7 +30,7 @@ for(const dir of (await readdir('objetos',{withFileTypes:true})).filter(d=>d.isD
  for(const tag of new Set(o.tags)) database.prepare('INSERT INTO tags VALUES (?,?)').run(o.id,tag);
  database.prepare('INSERT INTO sources VALUES (?,?,?)').run(o.id,o.source,o.sourceRetrieved);
  const assetChecks={};
- for(const [kind,path] of Object.entries(o.visual).filter(([k,v])=>['silhouette','texture','textureLow','clouds','glb','model','image'].includes(k)&&v)) {
+ for(const [kind,path] of Object.entries(o.visual).filter(([k,v])=>['silhouette','texture','textureLow','clouds','glb','model','image','ringTexture'].includes(k)&&v)) {
    if(path.includes('..') || path.includes('/') || path.includes('\\')) throw Error(`Nonlocal asset ${o.id}`);
    const bytes=await readFile(join('objetos',dir.name,path));
    assetChecks[kind]={exists:true,path,bytes:bytes.length};

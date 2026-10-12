@@ -14,6 +14,7 @@ export function auditObject(o,assetChecks={}){
  if(!reviewed(o))add('UNREVIEWED','warning','No consta una revisión científica de la ficha.');
  if(reviewed(o)&&!o.review?.date)add('REVIEW_DATE','warning','La revisión no tiene fecha ni alcance documentados.');
  if(o.visual?.schematicWidth)add('SCHEMATIC_WIDTH','warning','La anchura es ilustrativa: la altura es la medida de referencia.');
+ if(['width','height'].includes(o.visual?.imageScaleBasis))add('IMAGE_REFERENCE_AXIS','warning',`El recorte conserva sus proporciones y se ancla a la ${o.visual.imageScaleBasis==='height'?'altura':'longitud'} de referencia. Su eje transversal depende de la pose y no es una medida independiente.`);
  if(o.basis==='equivalent-area-square')add('EQUIVALENT_AREA','warning','Se representa una superficie equivalente; falta el contorno real.');
  if(o.measurementStatus==='theoretical')add('THEORETICAL','warning','El tamaño depende de un modelo teórico.');
  if(!o.visual?.texture&&!o.visual?.image&&!o.visual?.glb)add('ILLUSTRATIVE_IMAGE','warning','Solo dispone de una representación esquemática.');

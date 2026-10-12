@@ -13,7 +13,7 @@ for(const o of rows){
  if(o.status==='pending'&&o.dimensions!==null)throw Error(`Pending placeholder ${o.id}`);
  if(!o.source.startsWith('https://'))throw Error(`Missing provenance ${o.id}`);
  if(!o.summary.es||!o.summary.en)throw Error(`Missing summary ${o.id}`);
- for(const key of ['silhouette','texture','textureLow','glb','model','clouds','image'])if(o.visual[key])await stat(join('objetos',o.folder,o.visual[key]));
+ for(const key of ['silhouette','texture','textureLow','glb','model','clouds','image','ringTexture'])if(o.visual[key])await stat(join('objetos',o.folder,o.visual[key]));
  const quality=db.prepare('SELECT report FROM quality WHERE object_id=?').get(o.id);if(!quality)throw Error(`Missing quality report ${o.id}`);
  if(o.visual.imageBounds){const b=o.visual.imageBounds;if(!(b.x>=0&&b.y>=0&&b.width>0&&b.height>0&&b.x+b.width<=b.imageWidth&&b.y+b.height<=b.imageHeight))throw Error(`Invalid crop bounds ${o.id}`);}
 }

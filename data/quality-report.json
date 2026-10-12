@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "catalogHash": "b012049c0bbb8267bce7809a0e4d3910dd1447538b934c1268f71780a50f1408",
+  "catalogHash": "50a13a01fba48aaa53e458f3b53e154be14d80daf3b1b28e5384fa7f7018674c",
   "summary": {
     "total": 711,
     "comparable": 318,
@@ -22,22 +22,26 @@
       "ssd.jpl.nasa.gov": 463,
       "github.com": 177,
       "www.nationalzoo.si.edu": 14,
-      "www.royalcaribbeanpresscenter.com": 6,
-      "nssdc.gsfc.nasa.gov": 19,
+      "www.airbus.com": 1,
+      "nssdc.gsfc.nasa.gov": 18,
       "www.bangkok.go.th": 1,
       "www.barcelona.cat": 1,
       "www.berlin.de": 1,
       "www.fisheries.noaa.gov": 4,
-      "www.skyscrapercenter.com": 5,
+      "www.skyscrapercenter.com": 3,
       "physics.nist.gov": 9,
       "www.ncbi.nlm.nih.gov": 7,
       "www.toureiffel.paris": 1,
+      "www.esbnyc.com": 1,
+      "www.royalcaribbeanpresscenter.com": 5,
       "www.madrid.es": 1,
       "www.census.gov": 1,
+      "sagradafamilia.org": 1,
+      "science.nasa.gov": 1,
       "www.metro.tokyo.lg.jp": 1
     },
     "folders": 711,
-    "resources": 1275
+    "resources": 1333
   },
   "objects": [
     {
@@ -198,7 +202,7 @@
     {
       "id": "elephant",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -210,6 +214,11 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -243,7 +252,7 @@
     {
       "id": "a380",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 2,
       "reviewed": false,
       "issues": [
         {
@@ -252,9 +261,9 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -272,12 +281,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 174
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 827933
         }
       },
       "structure": {
         "folder": "Airbus A380",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -687,9 +701,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -707,12 +726,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 172
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1852676
         }
       },
       "structure": {
         "folder": "Ant (5 mm example)",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -932,12 +956,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 1364104
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 186789
         }
       },
       "structure": {
         "folder": "Ariel",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -1548,7 +1577,7 @@
     {
       "id": "bennu",
       "errors": 0,
-      "warnings": 4,
+      "warnings": 2,
       "reviewed": false,
       "issues": [
         {
@@ -1560,16 +1589,6 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
-        },
-        {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
-        },
-        {
-          "code": "NO_MEASURED_3D",
-          "severity": "warning",
-          "message": "No hay un modelo 3D observado; se usa una ilustración o un recorte cuando corresponde."
         }
       ],
       "assets": {
@@ -1582,12 +1601,22 @@
           "exists": true,
           "path": "model.json",
           "bytes": 170
+        },
+        "glb": {
+          "exists": true,
+          "path": "model.glb",
+          "bytes": 859980
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 184724
         }
       },
       "structure": {
         "folder": "Bennu",
         "metadata": true,
-        "resources": 2
+        "resources": 4
       }
     },
     {
@@ -1838,13 +1867,18 @@
     {
       "id": "blue-whale",
       "errors": 0,
-      "warnings": 2,
+      "warnings": 3,
       "reviewed": false,
       "issues": [
         {
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -2058,7 +2092,7 @@
     {
       "id": "burj-khalifa",
       "errors": 0,
-      "warnings": 5,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -2077,9 +2111,9 @@
           "message": "La anchura es ilustrativa: la altura es la medida de referencia."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -2093,10 +2127,10 @@
           "path": "silhouette.svg",
           "bytes": 190
         },
-        "model": {
+        "image": {
           "exists": true,
-          "path": "model.json",
-          "bytes": 170
+          "path": "image-0.3.png",
+          "bytes": 1416584
         }
       },
       "structure": {
@@ -2285,6 +2319,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 1398440
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 783405
         }
@@ -2292,7 +2331,7 @@
       "structure": {
         "folder": "Callisto",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -2588,7 +2627,7 @@
     {
       "id": "ceres",
       "errors": 0,
-      "warnings": 4,
+      "warnings": 2,
       "reviewed": false,
       "issues": [
         {
@@ -2600,16 +2639,6 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
-        },
-        {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
-        },
-        {
-          "code": "NO_MEASURED_3D",
-          "severity": "warning",
-          "message": "No hay un modelo 3D observado; se usa una ilustración o un recorte cuando corresponde."
         }
       ],
       "assets": {
@@ -2622,12 +2651,22 @@
           "exists": true,
           "path": "model.json",
           "bytes": 179
+        },
+        "glb": {
+          "exists": true,
+          "path": "model.glb",
+          "bytes": 9529028
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 204978
         }
       },
       "structure": {
         "folder": "Ceres",
         "metadata": true,
-        "resources": 2
+        "resources": 4
       }
     },
     {
@@ -2732,12 +2771,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 473760
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 267895
         }
       },
       "structure": {
         "folder": "Charon",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -2757,9 +2801,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -2777,12 +2826,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 168
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 2049565
         }
       },
       "structure": {
         "folder": "Chihuahua",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -2937,9 +2991,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -2957,12 +3016,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 170
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1170283
         }
       },
       "structure": {
         "folder": "Common squid",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -3417,12 +3481,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 1600012
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 283411
         }
       },
       "structure": {
         "folder": "Deimos",
         "metadata": true,
-        "resources": 4
+        "resources": 5
       }
     },
     {
@@ -3723,7 +3792,7 @@
     {
       "id": "cat",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -3735,6 +3804,11 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -3948,7 +4022,7 @@
     {
       "id": "eiffel",
       "errors": 0,
-      "warnings": 4,
+      "warnings": 3,
       "reviewed": false,
       "issues": [
         {
@@ -3962,9 +4036,9 @@
           "message": "La anchura es ilustrativa: la altura es la medida de referencia."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -3978,10 +4052,10 @@
           "path": "silhouette.svg",
           "bytes": 260
         },
-        "model": {
+        "image": {
           "exists": true,
-          "path": "model.json",
-          "bytes": 171
+          "path": "image-0.3.png",
+          "bytes": 1654978
         }
       },
       "structure": {
@@ -4158,14 +4232,9 @@
     {
       "id": "empire-state",
       "errors": 0,
-      "warnings": 5,
+      "warnings": 3,
       "reviewed": false,
       "issues": [
-        {
-          "code": "BROAD_SOURCE",
-          "severity": "warning",
-          "message": "La fuente es general: falta una referencia específica para esta medida."
-        },
         {
           "code": "UNREVIEWED",
           "severity": "warning",
@@ -4177,9 +4246,9 @@
           "message": "La anchura es ilustrativa: la altura es la medida de referencia."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -4193,10 +4262,10 @@
           "path": "silhouette.svg",
           "bytes": 190
         },
-        "model": {
+        "image": {
           "exists": true,
-          "path": "model.json",
-          "bytes": 169
+          "path": "image-0.3.png",
+          "bytes": 1575538
         }
       },
       "structure": {
@@ -4235,6 +4304,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 2983002
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 472211
         }
@@ -4242,7 +4316,7 @@
       "structure": {
         "folder": "Enceladus",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -4433,7 +4507,7 @@
     {
       "id": "eros",
       "errors": 0,
-      "warnings": 4,
+      "warnings": 2,
       "reviewed": false,
       "issues": [
         {
@@ -4445,16 +4519,6 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
-        },
-        {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
-        },
-        {
-          "code": "NO_MEASURED_3D",
-          "severity": "warning",
-          "message": "No hay un modelo 3D observado; se usa una ilustración o un recorte cuando corresponde."
         }
       ],
       "assets": {
@@ -4467,12 +4531,22 @@
           "exists": true,
           "path": "model.json",
           "bytes": 176
+        },
+        "glb": {
+          "exists": true,
+          "path": "model.glb",
+          "bytes": 2392188
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 100868
         }
       },
       "structure": {
         "folder": "Eros",
         "metadata": true,
-        "resources": 2
+        "resources": 4
       }
     },
     {
@@ -4577,9 +4651,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -4597,12 +4676,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 180
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1842812
         }
       },
       "structure": {
         "folder": "Escherichia coli",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -4905,6 +4989,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 1203898
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 610862
         }
@@ -4912,7 +5001,7 @@
       "structure": {
         "folder": "Europa",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -5188,7 +5277,7 @@
     {
       "id": "football-field",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 2,
       "reviewed": false,
       "issues": [
         {
@@ -5197,9 +5286,9 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -5217,12 +5306,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 169
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 3140446
         }
       },
       "structure": {
         "folder": "Football pitch (105 × 68 m)",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -5505,6 +5599,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 1181487
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 710923
         }
@@ -5512,7 +5611,7 @@
       "structure": {
         "folder": "Ganymede",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -5712,9 +5811,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -5732,12 +5836,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 167
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1083360
         }
       },
       "structure": {
         "folder": "Giant squid",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -5757,9 +5866,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la altura de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -5777,24 +5891,34 @@
           "exists": true,
           "path": "model.json",
           "bytes": 172
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 961649
         }
       },
       "structure": {
         "folder": "Giraffe",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
       "id": "white-shark",
       "errors": 0,
-      "warnings": 2,
+      "warnings": 3,
       "reviewed": false,
       "issues": [
         {
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -6683,7 +6807,7 @@
     {
       "id": "bee",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -6695,6 +6819,11 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -6737,9 +6866,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -6757,12 +6891,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 179
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 2187887
         }
       },
       "structure": {
         "folder": "Human ovum",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -6777,9 +6916,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -6797,12 +6941,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 183
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1813968
         }
       },
       "structure": {
         "folder": "Human red blood cell",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -6817,9 +6966,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -6837,12 +6991,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 180
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 237239
         }
       },
       "structure": {
         "folder": "Human sperm cell",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -6857,9 +7016,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -6877,12 +7041,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 167
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1343977
         }
       },
       "structure": {
         "folder": "Humpback whale",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -7032,12 +7201,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 1289188
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 582824
         }
       },
       "structure": {
         "folder": "Hyperion",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -7167,9 +7341,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -7187,12 +7366,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 168
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1173778
         }
       },
       "structure": {
         "folder": "Icon of the Seas",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -7257,9 +7441,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -7277,12 +7466,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 168
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 965878
         }
       },
       "structure": {
         "folder": "Impala",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -7357,9 +7551,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -7377,18 +7576,23 @@
           "exists": true,
           "path": "model.json",
           "bytes": 172
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 2594997
         }
       },
       "structure": {
         "folder": "Influenza virus",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
       "id": "iss",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 2,
       "reviewed": false,
       "issues": [
         {
@@ -7397,9 +7601,9 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -7417,12 +7621,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 169
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 2305798
         }
       },
       "structure": {
         "folder": "International Space Station",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -7455,6 +7664,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 1335932
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 702001
         }
@@ -7462,7 +7676,7 @@
       "structure": {
         "folder": "Io",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -7950,6 +8164,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 1337263
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 225878
         }
@@ -7957,7 +8176,7 @@
       "structure": {
         "folder": "Jupiter",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -8428,7 +8647,7 @@
     {
       "id": "dog-labrador",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -8440,6 +8659,11 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -9320,6 +9544,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 2364846
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 972896
         }
@@ -9327,7 +9556,7 @@
       "structure": {
         "folder": "Mars",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -9377,9 +9606,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -9397,12 +9631,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 167
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1371647
         }
       },
       "structure": {
         "folder": "Megalodon",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -9435,14 +9674,19 @@
         },
         "texture": {
           "exists": true,
-          "path": "texture.jpg",
-          "bytes": 1837564
+          "path": "texture-hd.jpg",
+          "bytes": 771570
+        },
+        "textureLow": {
+          "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 771570
         }
       },
       "structure": {
         "folder": "Mercury",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -9662,12 +9906,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 688936
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 105503
         }
       },
       "structure": {
         "folder": "Miranda",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -10185,6 +10434,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.png",
+          "bytes": 443257
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 210528
         }
@@ -10192,7 +10446,7 @@
       "structure": {
         "folder": "Neptune",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -10632,12 +10886,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 1518548
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 116701
         }
       },
       "structure": {
         "folder": "Oberon",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -11338,7 +11597,7 @@
     {
       "id": "human",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -11350,6 +11609,11 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la altura de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -11517,12 +11781,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 3855016
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 311246
         }
       },
       "structure": {
         "folder": "Phobos",
         "metadata": true,
-        "resources": 4
+        "resources": 5
       }
     },
     {
@@ -11633,16 +11902,26 @@
           "path": "model.json",
           "bytes": 182
         },
+        "texture": {
+          "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 1058704
+        },
         "glb": {
           "exists": true,
           "path": "model.glb",
           "bytes": 7009348
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 384596
         }
       },
       "structure": {
         "folder": "Pluto",
         "metadata": true,
-        "resources": 3
+        "resources": 5
       }
     },
     {
@@ -25483,14 +25762,9 @@
     {
       "id": "sagrada-familia",
       "errors": 0,
-      "warnings": 5,
+      "warnings": 3,
       "reviewed": false,
       "issues": [
-        {
-          "code": "BROAD_SOURCE",
-          "severity": "warning",
-          "message": "La fuente es general: falta una referencia específica para esta medida."
-        },
         {
           "code": "UNREVIEWED",
           "severity": "warning",
@@ -25502,9 +25776,9 @@
           "message": "La anchura es ilustrativa: la altura es la medida de referencia."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -25518,10 +25792,10 @@
           "path": "silhouette.svg",
           "bytes": 190
         },
-        "model": {
+        "image": {
           "exists": true,
-          "path": "model.json",
-          "bytes": 171
+          "path": "image-0.3.png",
+          "bytes": 2730280
         }
       },
       "structure": {
@@ -25542,9 +25816,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -25562,12 +25841,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 170
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 2313368
         }
       },
       "structure": {
         "folder": "Santa María (reconstruction)",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -25627,9 +25911,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -25647,12 +25936,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 172
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 2850865
         }
       },
       "structure": {
         "folder": "SARS-CoV-2",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -25685,14 +25979,24 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 583386
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 275735
+        },
+        "ringTexture": {
+          "exists": true,
+          "path": "rings.png",
+          "bytes": 9615
         }
       },
       "structure": {
         "folder": "Saturn",
         "metadata": true,
-        "resources": 3
+        "resources": 5
       }
     },
     {
@@ -25833,7 +26137,7 @@
     {
       "id": "shanghai-tower",
       "errors": 0,
-      "warnings": 5,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -25852,9 +26156,9 @@
           "message": "La anchura es ilustrativa: la altura es la medida de referencia."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -25868,10 +26172,10 @@
           "path": "silhouette.svg",
           "bytes": 190
         },
-        "model": {
+        "image": {
           "exists": true,
-          "path": "model.json",
-          "bytes": 170
+          "path": "image-0.3.png",
+          "bytes": 1584351
         }
       },
       "structure": {
@@ -26422,9 +26726,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -26442,12 +26751,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 167
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1329896
         }
       },
       "structure": {
         "folder": "Sperm whale",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -27640,6 +27954,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 23103
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 49233
         }
@@ -27647,7 +27966,7 @@
       "structure": {
         "folder": "Titan",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -27677,12 +27996,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 1932572
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 169269
         }
       },
       "structure": {
         "folder": "Titania",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -27697,9 +28021,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -27717,12 +28046,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 172
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 1345977
         }
       },
       "structure": {
         "folder": "Titanic",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {
@@ -27803,7 +28137,7 @@
     {
       "id": "tokyo-skytree",
       "errors": 0,
-      "warnings": 5,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -27822,9 +28156,9 @@
           "message": "La anchura es ilustrativa: la altura es la medida de referencia."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -27838,10 +28172,10 @@
           "path": "silhouette.svg",
           "bytes": 190
         },
-        "model": {
+        "image": {
           "exists": true,
-          "path": "model.json",
-          "bytes": 169
+          "path": "image-0.3.png",
+          "bytes": 1290076
         }
       },
       "structure": {
@@ -27955,6 +28289,11 @@
         },
         "texture": {
           "exists": true,
+          "path": "texture-hd.jpg",
+          "bytes": 837212
+        },
+        "textureLow": {
+          "exists": true,
           "path": "texture.jpg",
           "bytes": 242012
         }
@@ -27962,7 +28301,7 @@
       "structure": {
         "folder": "Triton",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -28058,7 +28397,7 @@
     {
       "id": "trex",
       "errors": 0,
-      "warnings": 3,
+      "warnings": 4,
       "reviewed": false,
       "issues": [
         {
@@ -28070,6 +28409,11 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
+        },
+        {
+          "code": "IMAGE_REFERENCE_AXIS",
+          "severity": "warning",
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
         },
         {
           "code": "GENERATED_IMAGE",
@@ -28187,12 +28531,17 @@
           "exists": true,
           "path": "model.glb",
           "bytes": 606920
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 74170
         }
       },
       "structure": {
         "folder": "Umbriel",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
@@ -28308,16 +28657,31 @@
           "path": "model.json",
           "bytes": 185
         },
+        "texture": {
+          "exists": true,
+          "path": "texture-hd.png",
+          "bytes": 30807
+        },
         "glb": {
           "exists": true,
           "path": "model.glb",
           "bytes": 172652
+        },
+        "textureLow": {
+          "exists": true,
+          "path": "texture-hd.png",
+          "bytes": 30807
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 144193
         }
       },
       "structure": {
         "folder": "Uranus",
         "metadata": true,
-        "resources": 3
+        "resources": 6
       }
     },
     {
@@ -28515,20 +28879,25 @@
         },
         "texture": {
           "exists": true,
-          "path": "texture.jpg",
-          "bytes": 1166974
+          "path": "texture-hd.png",
+          "bytes": 163160
+        },
+        "textureLow": {
+          "exists": true,
+          "path": "texture-hd.png",
+          "bytes": 163160
         }
       },
       "structure": {
         "folder": "Venus",
         "metadata": true,
-        "resources": 3
+        "resources": 4
       }
     },
     {
       "id": "vesta",
       "errors": 0,
-      "warnings": 4,
+      "warnings": 2,
       "reviewed": false,
       "issues": [
         {
@@ -28540,16 +28909,6 @@
           "code": "UNREVIEWED",
           "severity": "warning",
           "message": "No consta una revisión científica de la ficha."
-        },
-        {
-          "code": "ILLUSTRATIVE_IMAGE",
-          "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
-        },
-        {
-          "code": "NO_MEASURED_3D",
-          "severity": "warning",
-          "message": "No hay un modelo 3D observado; se usa una ilustración o un recorte cuando corresponde."
         }
       ],
       "assets": {
@@ -28562,12 +28921,22 @@
           "exists": true,
           "path": "model.json",
           "bytes": 179
+        },
+        "glb": {
+          "exists": true,
+          "path": "model.glb",
+          "bytes": 5073448
+        },
+        "image": {
+          "exists": true,
+          "path": "preview.png",
+          "bytes": 207302
         }
       },
       "structure": {
         "folder": "Vesta",
         "metadata": true,
-        "resources": 2
+        "resources": 4
       }
     },
     {
@@ -28692,9 +29061,14 @@
           "message": "No consta una revisión científica de la ficha."
         },
         {
-          "code": "ILLUSTRATIVE_IMAGE",
+          "code": "IMAGE_REFERENCE_AXIS",
           "severity": "warning",
-          "message": "Solo dispone de una representación esquemática."
+          "message": "El recorte conserva sus proporciones y se ancla a la longitud de referencia. Su eje transversal depende de la pose y no es una medida independiente."
+        },
+        {
+          "code": "GENERATED_IMAGE",
+          "severity": "info",
+          "message": "Recorte realista generado: no es una fotografía observada."
         },
         {
           "code": "NO_MEASURED_3D",
@@ -28712,12 +29086,17 @@
           "exists": true,
           "path": "model.json",
           "bytes": 169
+        },
+        "image": {
+          "exists": true,
+          "path": "image.png",
+          "bytes": 2904835
         }
       },
       "structure": {
         "folder": "Wild boar",
         "metadata": true,
-        "resources": 2
+        "resources": 3
       }
     },
     {

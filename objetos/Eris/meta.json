@@ -32,8 +32,12 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "sphere",
-    "fidelity": "illustrative",
+    "fidelity": "unmapped-reference",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "surfaceMapped": false,
+    "textureSource": "https://science.nasa.gov/dwarf-planets/eris/",
+    "note": "Esfera de referencia con superficie neutra: no dispone de cartografía global resuelta. Se conserva un aspecto uniforme en lugar de inventar cráteres observados.",
+    "reviewDate": "2026-10-13"
   }
 }

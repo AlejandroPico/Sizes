@@ -32,8 +32,10 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "sphere",
-    "fidelity": "illustrative",
+    "fidelity": "procedural-illustrative",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "note": "Horizonte y disco de acreción ilustrativos. El diámetro de referencia corresponde al modelo de Schwarzschild y excluye el disco y el resplandor. No es una simulación relativista ni una imagen observada.",
+    "effectExtent": 2.3
   }
 }

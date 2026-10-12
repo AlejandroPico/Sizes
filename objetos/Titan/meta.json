@@ -33,11 +33,17 @@
   },
   "visual": {
     "kind": "sphere",
-    "fidelity": "observed-texture",
+    "fidelity": "agency-map",
     "silhouette": "silhouette.svg",
     "model": "model.json",
-    "texture": "texture.jpg",
-    "glb": null
+    "texture": "texture-hd.jpg",
+    "glb": null,
+    "textureLow": "texture.jpg",
+    "textureSource": "https://science.nasa.gov/resource/titan-3d-model/",
+    "textureProcessing": "Proyección equirectangular con Three.js del material original NASA/VTAD, sin luz añadida ni detalle generado.",
+    "sourceDataURL": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/t/Titan_1_5150.glb",
+    "note": "Cartografía del recurso NASA/VTAD. Cobertura y resolución variables; las nubes y colores corresponden al material distribuido y no a meteorología en directo.",
+    "reviewDate": "2026-10-13"
   },
   "folder": "Titan",
   "tags": [

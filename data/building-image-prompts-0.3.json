@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "date": "2026-10-13",
+  "tool": "image_gen integrada",
+  "scope": "Ilustraciones arquitectónicas generadas, no fotografías ni escaneos; referencias oficiales consultadas como especificaciones, no imágenes de entrada.",
+  "assets": [
+    {
+      "id": "burj-khalifa",
+      "file": "objetos/Burj Khalifa/image-0.3.png",
+      "prompt": "Use case: scientific-educational. Asset type: realistic transparent building cutout for a size-comparison encyclopedia. Subject: the actual Burj Khalifa, Dubai, entire tower from the bottom of its compact podium to its 828 m needle tip. Reference specification: official architecture https://www.burjkhalifa.ae/the-tower/architecture-design/ : three buttressed wings around a central core, asymmetric spiraling stepped setbacks, increasingly narrow silver-blue glass fins, extremely slender sculpted needle spire. Render a recognizable faithful architectural museum illustration, not a generic skyscraper. Composition: portrait, orthographic front elevation with very slight three-quarter face visibility, parallel verticals, no perspective shortening, full structure unclipped, building fills image height with a small margin. Materials: detailed cool silver glass curtain wall and fine horizontal floor bands, soft neutral daylight, readable contrast. Genuine transparent alpha background. NO sky, clouds, other towers, roads, ground slab, shadow below ground, people, landscaping, logos, labels, or watermark. Do not add decorative structures or exaggerate setbacks.",
+      "references": [
+        "https://www.burjkhalifa.ae/the-tower/architecture-design/",
+        "https://www.burjkhalifa.ae/en/assets/FACT-SHEET.pdf"
+      ],
+      "imageBounds": {
+        "x": 289,
+        "y": 4,
+        "width": 447,
+        "height": 1528,
+        "imageWidth": 1024,
+        "imageHeight": 1536
+      },
+      "fileBytes": 1416584
+    },
+    {
+      "id": "eiffel",
+      "file": "objetos/Eiffel Tower/image-0.3.png",
+      "prompt": "Use case: scientific-educational. Asset type: realistic transparent building cutout for a size comparison. Subject: the real Eiffel Tower in Paris, entire recognizable 330 m tower INCLUDING the slim modern antenna, front orthographic elevation. Reference specification https://www.toureiffel.paris/en/the-monument/key-figures : four splayed legs, broad arched opening, first horizontal platform, second platform, narrowing curved lattice tower, top observation cabin and slim antenna. Detailed wrought-iron lattice with open transparent holes between beams; bronze-brown painted iron, realistic fine structural members, soft neutral daylight. Full tower isolated with every foot and antenna visible, parallel verticals, no perspective shortening, portrait composition with small margins. Actual transparent alpha through background and lattice gaps. NO Paris skyline, sky, ground slab, ground shadow, people, plants, labels, logos or watermark. Do not replace with generic pyramidal framework, do not omit open arches.",
+      "references": [
+        "https://www.toureiffel.paris/en/the-monument/key-figures"
+      ],
+      "imageBounds": {
+        "x": 143,
+        "y": 3,
+        "width": 739,
+        "height": 1533,
+        "imageWidth": 1024,
+        "imageHeight": 1536
+      },
+      "fileBytes": 1654978
+    },
+    {
+      "id": "empire-state",
+      "file": "objetos/Empire State Building/image-0.3.png",
+      "prompt": "Use case: scientific-educational. Asset type: realistic transparent building cutout for a size-comparison encyclopedia. Subject: the actual current Empire State Building New York, recognizable Art Deco massing from base to top of its modern broadcasting ANTENNA at 1454 feet (about 443.2 m) total height. Reference: official https://www.esbnyc.com/about/facts-figures and https://www.esbnyc.com/about/architecture-design . Include the tall thin 62 m antenna above the original 102nd floor Art Deco mooring mast; the full tip height is compared. Precise stepped limestone rectangular tower, dense vertical rows of dark rectangular windows, broad lower podium, upper tiers tapering to original silver Art Deco crown and original mooring mast, above that a long slender metallic broadcast antenna with recognizable stacked antenna equipment bands. Realistic architectural museum illustration, ivory grey limestone and metallic crown, front orthographic elevation with subtle three-quarter side face, parallel verticals no wide-angle distortion. Entire current building isolated unclipped from ground base to full antenna tip. Portrait full height small margins. Genuine transparent alpha, no sky/city/roads/ground/shadows/people/labels/logos/watermark.",
+      "references": [
+        "https://www.esbnyc.com/about/facts-figures",
+        "https://www.esbnyc.com/about/architecture-design"
+      ],
+      "imageBounds": {
+        "x": 261,
+        "y": 4,
+        "width": 502,
+        "height": 1526,
+        "imageWidth": 1024,
+        "imageHeight": 1536
+      },
+      "fileBytes": 1575538
+    },
+    {
+      "id": "sagrada-familia",
+      "file": "objetos/Sagrada Familia (planned height)/image-0.3.png",
+      "prompt": "Use case: scientific-educational. Asset type: realistic architectural reconstruction transparent cutout for a size-comparison encyclopedia. Subject: Basilica of the Sagrada Familia Barcelona, recognizable Antoni Gaudí basilica reconstructed in its complete design, entire facade and central tower of Jesus at the specified 172.5 m height, with the cross above the central tower. Reference: official tower booklet https://sagradafamilia.org/documents/20142/1693659/SF_Booklet_01_20260227_digital_AF.pdf/a44dfe77-d5af-412f-0657-e203984acd73 and official https://sagradafamilia.org/en/-/una-creu-que-arriba-al-cel-de-barcelona . Show organic Gothic beige stone basilica with clustered narrow perforated conical bell towers, four lower central Evangelist towers, Virgin Mary tower with its star, dominant tallest Jesus central tower with four-armed pale cross, intricate sculpted portals and pinnacles, proper hierarchical heights. This is an educational generated reconstruction, not a photograph nor proof of all completed works. Long-lens orthographic-style front elevation, full architectural silhouette unclipped, no nearby city, no scaffolding/cranes, no ground base, no people, no text/labels/logos/watermark. Neutral daylight realistic sandstone detail. Genuine transparent alpha background, portrait framing small margins. No imaginary generic Gothic cathedral, no duplicated central towers.",
+      "references": [
+        "https://sagradafamilia.org/en/-/una-creu-que-arriba-al-cel-de-barcelona?redirect=/en/home",
+        "https://sagradafamilia.org/documents/20142/1693659/SF_Booklet_01_20260227_digital_AF.pdf/a44dfe77-d5af-412f-0657-e203984acd73"
+      ],
+      "imageBounds": {
+        "x": 9,
+        "y": 13,
+        "width": 1006,
+        "height": 1507,
+        "imageWidth": 1024,
+        "imageHeight": 1536
+      },
+      "fileBytes": 2730280
+    },
+    {
+      "id": "shanghai-tower",
+      "file": "objetos/Shanghai Tower/image-0.3.png",
+      "prompt": "Use case: scientific-educational. Asset type: realistic transparent skyscraper cutout for a size-comparison encyclopedia. Subject: the actual Shanghai Tower designed by Gensler, complete 632 m building from narrow rounded ground podium to its actual asymmetrical crown. Official reference https://www.gensler.com/projects/shanghai-tower and https://www.gensler.com/uploads/document/242/file/Shanghai_Tower_Facade_Design_Process_11_10_2011.pdf : soft rounded triangular form, tapering glass double skin with a continuous subtle 120-degree spiral over the whole height, elegant slanted opening of crown, closely spaced floor bands visible through glass. This tower is a smooth twisting glass tube, NOT a stepped pagoda or a generic rectangular skyscraper. Realistic architectural museum illustration, pale silver-blue glass with readable fine vertical ribs and floor grids. Orthographic long-lens front elevation, parallel verticals, no wide-angle perspective shortening, entire tower unclipped, portrait framing small margins. Genuine transparent alpha, no sky, other buildings, skyline, ground, reflection pool, cast shadow, people, labels/logo/watermark.",
+      "references": [
+        "https://www.gensler.com/projects/shanghai-tower",
+        "https://www.gensler.com/uploads/document/242/file/Shanghai_Tower_Facade_Design_Process_11_10_2011.pdf"
+      ],
+      "imageBounds": {
+        "x": 381,
+        "y": 5,
+        "width": 285,
+        "height": 1522,
+        "imageWidth": 1024,
+        "imageHeight": 1536
+      },
+      "fileBytes": 1584351
+    },
+    {
+      "id": "tokyo-skytree",
+      "file": "objetos/Tokyo Skytree/image-0.3.png",
+      "prompt": "Use case: scientific-educational. Asset type: realistic transparent broadcasting tower cutout for a size-comparison encyclopedia. Subject: actual Tokyo Skytree, complete 634 m tower from its three slim splayed structural feet to top antenna tip. Official reference https://www.tokyo-skytree.jp/about/outline/ : triangular 68 m base changes toward circular section upward, very slender white steel triangulated lattice mast; large inverted truncated cone Tembo Deck at 350 m, smaller enclosed upper Tembo Galleria around 450 m, long slim upper broadcasting antenna reaching 634 m. Render the actual recognizable Skytree with two distinctly sized observation decks at correct relative heights, not CN Tower and not Tokyo Tower. Realistic architectural museum illustration with detailed cool-white lattice and subtle silver glass observation cabins. Front orthographic elevation parallel verticals, no perspective shortening, full tower unclipped portrait small margins. Genuine transparent alpha background including lattice openings. NO surrounding low buildings, ground platform, sky, shadows, people, plants, labels/logos/watermark.",
+      "references": [
+        "https://www.tokyo-skytree.jp/about/outline/"
+      ],
+      "imageBounds": {
+        "x": 400,
+        "y": 11,
+        "width": 224,
+        "height": 1518,
+        "imageWidth": 1024,
+        "imageHeight": 1536
+      },
+      "fileBytes": 1290076
+    }
+  ]
+}

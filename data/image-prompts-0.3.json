@@ -1,0 +1,546 @@
+{
+  "provider": "OpenAI ImageGen",
+  "mode": "built-in",
+  "date": "2026-10-13",
+  "fidelity": "generated-realistic",
+  "observed": false,
+  "assets": [
+    {
+      "id": "ant",
+      "folder": "Ant (5 mm example)",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One typical adult black worker ant, full left-facing side view, exactly three principal body segments head/thorax/abdomen, narrow waist, six articulated legs attached to thorax, two elbowed antennae. Slim natural ant proportions, not spider, wings or bee.",
+      "references": [],
+      "path": "objetos/Ant (5 mm example)/image.png",
+      "imageBounds": {
+        "x": 45,
+        "y": 180,
+        "width": 1425,
+        "height": 705,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.7563527425130209,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "dog-chihuahua",
+      "folder": "Chihuahua",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult short-coated fawn Chihuahua dog, complete left-facing side profile, standing on four paws at a common baseline. Apple-shaped head, large erect ears, dark eyes, small compact body, natural short fine fur, slender legs, gently curled tail. No accessories. Anatomically correct breed, not generic large dog.",
+      "references": [],
+      "path": "objetos/Chihuahua/image.png",
+      "imageBounds": {
+        "x": 196,
+        "y": 10,
+        "width": 1179,
+        "height": 988,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.6672128041585287,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "squid",
+      "folder": "Common squid",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult common European squid (Loligo vulgaris), complete left-facing lateral profile. Head and tentacle tips toward left, elongated pale pink mantle toward right with two broad triangular fins near rear. Exactly eight short arms clustered around mouth plus two longer slender feeding tentacles with terminal clubs extending left, visible large eye, realistic cephalopod proportions and subtle translucent skin. Not octopus, no ocean, mouth fantasy or shell.",
+      "references": [],
+      "path": "objetos/Common squid/image.png",
+      "imageBounds": {
+        "x": 24,
+        "y": 153,
+        "width": 1733,
+        "height": 551,
+        "imageWidth": 1774,
+        "imageHeight": 887
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.735260921566559,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "giant-squid",
+      "folder": "Giant squid",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult giant squid (Architeuthis dux), full left-facing lateral museum reconstruction. Head toward left, long reddish tapered cylindrical mantle to right with compact posterior paired fins. Eight arms around mouth plus two extremely long slender feeding tentacles with terminal sucker clubs stretched to left, large eye, natural plausible body and arm structure. Whole tentacle tips and mantle tip visible, no curling into tangled impossible mass, no water. Reconstruction of known morphology, not documentary footage.",
+      "references": [],
+      "path": "objetos/Giant squid/image.png",
+      "imageBounds": {
+        "x": 22,
+        "y": 26,
+        "width": 2136,
+        "height": 666,
+        "imageWidth": 2172,
+        "imageHeight": 724
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.7600049092925532,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "giraffe",
+      "folder": "Giraffe",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult giraffe, complete left-facing side profile standing naturally with all four feet at baseline. Long upright neck, small head with two ossicones and large ears, tawny coat with brown polygon patches, high shoulders and sloping back, long legs, tail with dark tuft. Accurate giraffe proportions, entire head and feet visible.",
+      "references": [],
+      "path": "objetos/Giraffe/image.png",
+      "imageBounds": {
+        "x": 112,
+        "y": 12,
+        "width": 1097,
+        "height": 1164,
+        "imageWidth": 1312,
+        "imageHeight": 1199
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.7824692579181839,
+      "imageScaleBasis": "height",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la altura de referencia del catálogo. La anchura visible depende de la postura y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference height. Visible width depends on pose and is illustrative. It is a generated illustration, not a photograph or anatomical scan."
+      }
+    },
+    {
+      "id": "humpback",
+      "folder": "Humpback whale",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult humpback whale (Megaptera novaeangliae), entire strict left-facing side profile, natural swimming posture, dark gray-black body with pale belly, distinct tubercles on broad head, very long pale pectoral flippers, small hump and dorsal fin, complete two-lobed tail flukes, throat grooves. Recognizable humpback anatomy, no whale generic smooth head or water.",
+      "references": [],
+      "path": "objetos/Humpback whale/image.png",
+      "imageBounds": {
+        "x": 22,
+        "y": 82,
+        "width": 1905,
+        "height": 648,
+        "imageWidth": 1950,
+        "imageHeight": 807
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.6709268261684619,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "antelope",
+      "folder": "Impala",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult male impala (Aepyceros melampus), entire left-facing side profile, standing on four slim long legs at baseline. Graceful reddish tan body, white belly and black rear markings, small head with large pointed ears, long ridged lyre-shaped horns, short thin tail. Accurate elegant African antelope anatomy, not dog or deer fantasy.",
+      "references": [],
+      "path": "objetos/Impala/image.png",
+      "imageBounds": {
+        "x": 107,
+        "y": 4,
+        "width": 1109,
+        "height": 1167,
+        "imageWidth": 1312,
+        "imageHeight": 1199
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.7520208659655404,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "megalodon",
+      "folder": "Megalodon",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One plausible adult extinct Otodus megalodon, full left-facing lateral museum reconstruction, large elongated powerful lamniform shark body, robust head, gray-blue upper skin white belly, conical snout, five gill slits, triangular dorsal fin, pectoral fins, smaller pelvic and rear fins, asymmetric crescent caudal fin, mouth closed. No fantasy monsters or oversized teeth protruding. Reconstruction explicitly plausible, not claimed observed animal.",
+      "references": [],
+      "path": "objetos/Megalodon/image.png",
+      "imageBounds": {
+        "x": 27,
+        "y": 13,
+        "width": 1904,
+        "height": 782,
+        "imageWidth": 1942,
+        "imageHeight": 809
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.6217138805329844,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "sperm-whale",
+      "folder": "Sperm whale",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult sperm whale (Physeter macrocephalus), full strict left-facing profile swimming straight. Characteristic enormous block-shaped blunt head comprising about a third of body length, narrow under-slung lower jaw, dark gray wrinkled skin, small pectoral flippers, low dorsal hump with knuckles toward tail, robust body tapering into complete horizontal two-lobed tail flukes. Correct sperm-whale anatomy, no baleen whale-shaped snout or water.",
+      "references": [],
+      "path": "objetos/Sperm whale/image.png",
+      "imageBounds": {
+        "x": 41,
+        "y": 184,
+        "width": 1920,
+        "height": 418,
+        "imageWidth": 1983,
+        "imageHeight": 793
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.6329379803996009,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "boar",
+      "folder": "Wild boar",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One adult Eurasian wild boar (Sus scrofa), full left-facing side profile standing naturally on all four cloven-hoof feet at baseline. Stocky muscular brown-gray body, dense bristly fur, sloping back, elongated pig snout, small erect ears, short natural tail, discreet ivory tusks, dark eyes. Correct boar anatomy, not dog, no accessories.",
+      "references": [],
+      "path": "objetos/Wild boar/image.png",
+      "imageBounds": {
+        "x": 35,
+        "y": 73,
+        "width": 1468,
+        "height": 880,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.48154322306315106,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "ecoli",
+      "folder": "Escherichia coli",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One Escherichia coli bacterium, complete horizontal side view, recognizable rounded rod-shaped cell about four times longer than wide, realistically subtle granular cell envelope with short fine surface fimbriae. Do not add long flagella or expose imagined organelles. Gentle muted scientific illustrative coloring, not claimed natural microscopy colors or photomicrograph.",
+      "references": [],
+      "path": "objetos/Escherichia coli/image.png",
+      "imageBounds": {
+        "x": 42,
+        "y": 197,
+        "width": 1681,
+        "height": 527,
+        "imageWidth": 1774,
+        "imageHeight": 887
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.5312906329557977,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "ovum",
+      "folder": "Human ovum",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One intact human ovum cell, approximately circular spherical cellular silhouette, delicate pale warm semitranslucent cell surface and clear narrow zona pellucida envelope, subtle fine biological texture. External view, no cutaway, no embryo inside, no expressive face, no orange fruit appearance, no surrounding cells. Scientific visual color interpretation not literal observed microscopy.",
+      "references": [],
+      "path": "objetos/Human ovum/image.png",
+      "imageBounds": {
+        "x": 80,
+        "y": 79,
+        "width": 1094,
+        "height": 1088,
+        "imageWidth": 1254,
+        "imageHeight": 1254
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.3817124913196432,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "red-blood-cell",
+      "folder": "Human red blood cell",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One mature human erythrocyte viewed nearly face-on with slight angle revealing its biconcave disc geometry. Smooth flexible red cell membrane with characteristic central depression on both faces, thin rim, no nucleus, not sphere, torus or donut with a hole. Medical museum illustration with believable red translucency, not observed microscopy.",
+      "references": [],
+      "path": "objetos/Human red blood cell/image.png",
+      "imageBounds": {
+        "x": 76,
+        "y": 83,
+        "width": 1189,
+        "height": 1005,
+        "imageWidth": 1312,
+        "imageHeight": 1199
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.39985239223743363,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "sperm",
+      "folder": "Human sperm cell",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One human spermatozoon in full horizontal left-facing side view: small smooth flattened oval head on left, narrow short mitochondrial midpiece, a single extremely long slender flagellum extending gently and almost straight right to a fine tip. Accurate head-to-tail proportions, no multiple tails, no oversized face, no eggs or environment. Muted light pearl-gray illustrative biological coloring, not actual observed microscopy.",
+      "references": [],
+      "path": "objetos/Human sperm cell/image.png",
+      "imageBounds": {
+        "x": 49,
+        "y": 278,
+        "width": 2075,
+        "height": 150,
+        "imageWidth": 2172,
+        "imageHeight": 724
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.9469268591719829,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "influenza",
+      "folder": "Influenza virus",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One spherical enveloped influenza A virion, external scientific reconstruction, subtle gray-blue lipid envelope covered with many small tightly spaced hemagglutinin/neuraminidase surface glycoprotein projections, roughly rounded silhouette and believable nanoscale surface. No oversized coronavirus club spikes, tentacles, eye, cutaway or decorative network. Color is interpretive illustration not actual observed microscopy.",
+      "references": [],
+      "path": "objetos/Influenza virus/image.png",
+      "imageBounds": {
+        "x": 60,
+        "y": 57,
+        "width": 1139,
+        "height": 1135,
+        "imageWidth": 1254,
+        "imageHeight": 1254
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.36377499497620375,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "sars-cov-2",
+      "folder": "SARS-CoV-2",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One spherical enveloped SARS-CoV-2 virion, external scientific reconstruction, softly granular muted gray lipid envelope with clearly distinguishable red short stalked club-shaped trimeric spike proteins distributed on surface. Recognizable coronavirus morphology, no monster tendrils, eyes or cutaway. Controlled medical illustration, interpretive false colors not actual observed microscopy.",
+      "references": [],
+      "path": "objetos/SARS-CoV-2/image.png",
+      "imageBounds": {
+        "x": 17,
+        "y": 23,
+        "width": 1221,
+        "height": 1207,
+        "imageWidth": 1254,
+        "imageHeight": 1254
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.3106696529637854,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "a380",
+      "folder": "Airbus A380",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One Airbus A380-800, accurate strict top-down orthographic plan view, nose pointing straight up, full swept wings stretching horizontally, fuselage and complete tail visible. Wingspan slightly exceeds fuselage length (about 79.8 m versus 72.7 m), four large jet engines under wings, two per side, correct broad double-deck fuselage, white neutral unbranded body with gray metal wing surfaces, no airline lettering or logos. No wheels projecting sideways, no perspective angle or runway. A realistic aircraft technical catalogue cutout, not toy.",
+      "references": [
+        "https://www.airbus.com/en/products-services/commercial-aircraft/passenger-aircraft/a380"
+      ],
+      "path": "objetos/Airbus A380/image.png",
+      "imageBounds": {
+        "x": 6,
+        "y": 11,
+        "width": 1300,
+        "height": 1162,
+        "imageWidth": 1312,
+        "imageHeight": 1199
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.7251882920726622,
+      "note": {
+        "es": "Vista de conjunto orientada según los ejes del catálogo. La ilustración generada contiene detalles interpretativos; no es una fotografía observada, un escaneo ni un plano de ingeniería.",
+        "en": "Overview aligned with catalogue axes. This generated illustration includes interpretive details; it is not an observed photograph, scan or engineering drawing."
+      }
+    },
+    {
+      "id": "football-field",
+      "folder": "Football pitch (105 × 68 m)",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One full standard association football pitch, strict top-down orthographic view, long 105 m axis horizontal, short 68 m axis vertical, realistic closely mowed green grass with subtle alternating stripes. Accurate white rectangular touchlines, halfway line, centre circle and centre spot, symmetric penalty areas and goal areas on left and right ends, corner arcs, penalty spots. The image ends at the outer field boundary, transparent outside. No stadium, crowd, goals beyond the boundaries, text, logos or perspective.",
+      "references": [
+        "https://www.theifab.com/laws/latest/the-field-of-play/"
+      ],
+      "path": "objetos/Football pitch (105 × 68 m)/image.png",
+      "imageBounds": {
+        "x": 42,
+        "y": 78,
+        "width": 1453,
+        "height": 862,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.1917870839436849,
+      "editPrompts": [
+        {
+          "id": "football-field",
+          "prompt": "Edit target: attached football pitch. Correct the outer green rectangle to exact width:height ratio 105:68 =1.5441:1, long axis horizontal, strict overhead orthographic. The current rectangle is too wide for its height. Preserve realistic mown grass and mathematically clean correct IFAB line layout: halfway, centre circle, penalty and goal areas symmetric, corner arcs, spots. Outside outer grass rectangle must be genuinely transparent alpha, no halo or grass background. No new objects, stands, labels, logos or text. Keep a clean realistic catalogue pitch asset.",
+          "applied": false,
+          "reason": "La segunda salida no mejoró la proporción del rectángulo; se conserva la primera ilustración."
+        }
+      ],
+      "note": {
+        "es": "Vista de conjunto orientada según los ejes del catálogo. La ilustración generada contiene detalles interpretativos; no es una fotografía observada, un escaneo ni un plano de ingeniería.",
+        "en": "Overview aligned with catalogue axes. This generated illustration includes interpretive details; it is not an observed photograph, scan or engineering drawing."
+      }
+    },
+    {
+      "id": "iss",
+      "folder": "International Space Station",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One recognizable International Space Station assembled configuration, isolated complete broadside overhead orthographic plan view, long main truss running horizontally, overall transverse solar wings arranged vertically. Eight pairs of large copper-brown rectangular solar-array blankets balanced along both ends of truss, cylindrical white/silver pressurized module complex crossing near centre, white radiator panels, subtle robotic arm. Whole truss tips, modules and all array tips visible; scientific museum technical reconstruction, not arbitrary spaceship or grid-shaped football field. No Earth, space background, stars or labels.",
+      "references": [
+        "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+      ],
+      "path": "objetos/International Space Station/image.png",
+      "imageBounds": {
+        "x": 46,
+        "y": 45,
+        "width": 1448,
+        "height": 927,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.5094331105550131,
+      "note": {
+        "es": "Vista de conjunto orientada según los ejes del catálogo. La ilustración generada contiene detalles interpretativos; no es una fotografía observada, un escaneo ni un plano de ingeniería.",
+        "en": "Overview aligned with catalogue axes. This generated illustration includes interpretive details; it is not an observed photograph, scan or engineering drawing."
+      }
+    },
+    {
+      "id": "santa-maria",
+      "folder": "Santa María (reconstruction)",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One plausible late-15th-century Santa María nao reconstruction, complete left-facing side profile as a detailed museum model rendered realistically. Short broad deep wooden hull, modest raised forecastle to left and tall sterncastle right, bowsprit, three masts, large square canvas sails on main and fore masts and a triangular lateen mizzen sail aft, restrained period rigging, natural aged brown timber and ivory linen. Entire hull keel, mast tips and bowsprit visible, no display stand or base. Historical conjectural reconstruction, not claimed exact measured original. No decorative crosses, text, water, pirate flags, cannons or fantasy galleon excessive decks.",
+      "references": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-153072"
+      ],
+      "path": "objetos/Santa María (reconstruction)/image.png",
+      "imageBounds": {
+        "x": 10,
+        "y": 10,
+        "width": 1520,
+        "height": 986,
+        "imageWidth": 1536,
+        "imageHeight": 1024
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.4679991404215495,
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "titanic",
+      "folder": "Titanic",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One RMS Titanic as built in 1912, complete strict left-facing side elevation, recognizable accurate long slender black hull, white tiered superstructure, exactly four evenly spaced buff funnels with black caps slightly raked back toward stern, two slim masts, lifeboats along upper boat deck. Bow toward left, rounded stern toward right. Full hull to keel including understated red lower anti-fouling portion, mast tips and full bow/stern visible. Ship body about five times longer than total silhouette height. No smoke, water, iceberg, sinking damage, passengers, stands, text or logos. Detailed realistic museum reconstruction; not a modern cruise ship.",
+      "references": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-67368"
+      ],
+      "path": "objetos/Titanic/image.png",
+      "imageBounds": {
+        "x": 24,
+        "y": 102,
+        "width": 2129,
+        "height": 524,
+        "imageWidth": 2172,
+        "imageHeight": 724
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.5731007651374093,
+      "editPrompts": [
+        {
+          "prompt": "Edit target: the attached Titanic side-elevation cutout. Correct ONLY the overall ship's proportions so its COMPLETE visible length from bow tip to stern tip divided by COMPLETE height from keel bottom to tallest mast tip is 5.05 to 1. The current illustration is too tall: rebuild the elevation with substantially lower hull/superstructure and shorter masts at the same complete length. Preserve recognizable Titanic 1912 identity: exactly four buff funnels with black caps, two masts, black hull, restrained red keel and white superstructure, bow left, stern right, clean strict profile. Fine authentic details, no exaggeration. Whole outline within image with transparent margin, genuine alpha outside, no background, smoke, glows, external shadows, labels or text. Remain a realistic generated museum reconstruction.",
+          "applied": true,
+          "method": "OpenAI ImageGen built-in edit"
+        }
+      ],
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    },
+    {
+      "id": "icon-of-the-seas",
+      "folder": "Icon of the Seas",
+      "prompt": "Use case: scientific-educational. Asset: one realistic museum/manual catalogue cutout for a size comparator. Accurate recognizable natural anatomy, neutral diffuse lighting, fine natural textures, entire subject visible with 2% transparent margin, orthographic-like view avoiding foreshortening. Truly transparent alpha outside exact subject, no backdrop, haze, glow, floor, external shadow, labels, writing, watermark, border, scenery or extra subjects. This is a generated educational illustration, never an observed photograph. One recognizable Royal Caribbean Icon of the Seas, entire strict left-facing side elevation, very long light-blue hull, white tall multi-deck superstructure with continuous rows of balcony cabins and dark window bands. Distinctive curved glass AquaDome above forward bow section on left, orange lifeboats along sides, large colorful water-slide complex toward aft upper decks on right, stepped open aft decks, natural bridge and masts. Proportions about 365 m long versus 65 m total upper silhouette height, realistic known Icon-class layout rather than invented generic liner. Full keel to top structures, bow and stern visible. No water, smoke, scene, text, logos or other ships. Generated illustrative reconstruction, not a technical surveyed model.",
+      "references": [
+        "https://royalcaribbeanpresscenter.com/Icon"
+      ],
+      "path": "objetos/Icon of the Seas/image.png",
+      "imageBounds": {
+        "x": 13,
+        "y": 262,
+        "width": 1958,
+        "height": 381,
+        "imageWidth": 1983,
+        "imageHeight": 793
+      },
+      "alphaThreshold": 16,
+      "pixelEditing": false,
+      "transparentFraction": 0.6384685971997794,
+      "editPrompts": [
+        {
+          "prompt": "Edit target: attached Icon of the Seas cutout. Correct the entire ship's side-elevation proportions: complete bow-to-stern length divided by complete keel-bottom-to-highest-structure height MUST be approximately 5.6 to 1. Current silhouette is much too high. Rebuild a visibly longer and lower ship in strict left-facing side view with realistic cabin deck heights. Preserve light-blue hull, white balcony tiers, glass AquaDome forward left, orange lifeboats and colorful slides aft right. Exactly TWO main large exhaust housings toward middle/aft rather than three random funnels; small vents are subtle. Full outline and thin transparent margin, genuine transparent alpha, no backdrop or external shadows or text. Generated museum-style illustrative reconstruction, not observed photo.",
+          "applied": true,
+          "method": "OpenAI ImageGen built-in edit"
+        }
+      ],
+      "imageScaleBasis": "width",
+      "note": {
+        "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+        "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+      }
+    }
+  ]
+}

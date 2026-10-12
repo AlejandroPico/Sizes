@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {layout,formatLength,extent,autoTheme} from '../src/scale.js';
 import {exportXlsx} from '../src/export.js';
 import {unzipSync,strFromU8} from 'fflate';
+import {displayDimensions,usesImage} from '../src/representation.js';
 const object=(id,width,height=width)=>({id,dimensions:{width,height,depth:null},visual:{}});
 test('Moon and Earth share one physical scale',()=>{
  const earth=object('earth',12756000),moon=object('moon',3474800);
@@ -24,6 +25,25 @@ test('Non-spherical objects keep their width and height; unlimited lineup scroll
 test('Empty comparison and missing measures are honest',()=>{
  assert.deepEqual(layout([],800,420),{items:[],pixelsPerMeter:0,totalWidth:800});
  assert.equal(extent({dimensions:null}),null);assert.equal(formatLength(null),'—');assert.ok(formatLength(1e-35).includes('10^'));
+});
+test('Portrait sequences scroll vertically without shrinking to fit the whole list',()=>{
+ const objects=Array.from({length:15},(_,i)=>object(String(i),10,10));
+ const single=layout(objects.slice(0,1),390,844,{vertical:true}),many=layout(objects,390,844,{vertical:true});
+ assert.equal(many.pixelsPerMeter,single.pixelsPerMeter);assert.ok(many.items[0].width>300);assert.equal(many.totalWidth,390);assert.ok(many.totalHeight>5000);
+ for(let i=1;i<many.items.length;i++)assert.ok(many.items[i].centerY>many.items[i-1].labelY+60);
+ const moon=layout([object('earth',12756000),object('moon',3474800)],390,844,{vertical:true});assert.ok(Math.abs(moon.items[0].width/moon.items[1].width-12756000/3474800)<1e-12);
+ assert.equal(layout([],390,844,{vertical:true}).totalHeight,844);
+});
+test('A building with a schematic width retains image proportions and measured height',()=>{
+ const o=object('building',80,443.2);o.visual={schematicWidth:true,image:'building.png',imageBounds:{width:502,height:1526}};
+ const result=layout([o],1100,800);assert.ok(Math.abs(result.items[0].width/result.items[0].height-502/1526)<1e-12);assert.ok(Math.abs(result.items[0].height/result.pixelsPerMeter-443.2)<1e-9);assert.equal(o.dimensions.width,80);
+});
+test('Image fallbacks preserve anatomy and their reference axis without changing stored measurements',()=>{
+ const animal=object('animal',18,4.5);animal.visual={image:'animal.png',imageScaleBasis:'width',imageBounds:{width:1200,height:400}};
+ assert.deepEqual(displayDimensions(animal),{width:18,height:6});assert.equal(animal.dimensions.height,4.5);assert.deepEqual(displayDimensions(animal,'vector'),{width:18,height:4.5});
+ const cell=object('red-blood-cell',7.5e-6);cell.visual={kind:'sphere',image:'cell.png',imageScaleBasis:'width',imageBounds:{width:900,height:600}};
+ assert.equal(usesImage(cell),false);assert.deepEqual(displayDimensions(cell),cell.dimensions?{width:7.5e-6,height:7.5e-6}:null);assert.equal(usesImage(cell,'textured'),true);
+ const model=object('asteroid',500);model.visual={glb:'model.glb',image:'preview.png',imageScaleBasis:'width',imageBounds:{width:800,height:600}};assert.equal(usesImage(model),false);assert.equal(usesImage(model,'textured'),true);
 });
 test('Theme uses local clock and date',()=>{
  assert.equal(autoTheme(new Date(2026,5,15,12)),'morning');assert.equal(autoTheme(new Date(2026,5,15,19)),'afternoon');assert.equal(autoTheme(new Date(2026,11,15,3)),'night');

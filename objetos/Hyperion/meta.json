@@ -37,7 +37,19 @@
     "silhouette": "silhouette.svg",
     "model": "model.json",
     "texture": null,
-    "glb": "model.glb"
+    "glb": "model.glb",
+    "image": "preview.png",
+    "imageBounds": {
+      "x": 2,
+      "y": 3,
+      "width": 508,
+      "height": 722,
+      "imageWidth": 512,
+      "imageHeight": 728
+    },
+    "imageSource": "https://science.nasa.gov/resource/hyperion-3d-model/",
+    "imageProcessing": "Vista fija renderizada del modelo NASA/VTAD local con Three.js, fondo transparente. No es una fotografía nueva.",
+    "reviewDate": "2026-10-13"
   },
   "folder": "Hyperion",
   "tags": [

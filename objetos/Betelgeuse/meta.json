@@ -14,11 +14,11 @@
   },
   "shape": "sphere",
   "basis": "mean-diameter",
-  "color": "#aabcc9",
+  "color": "#ff9658",
   "measurementStatus": "estimated",
   "summary": {
-    "es": "Escala astronómica aproximada. El valor depende de la definición del borde y del modelo de medida indicado en esta ficha.",
-    "en": "Approximate astronomical scale. The value depends on the boundary definition and the measurement model stated in this entry."
+    "es": "Betelgeuse es una supergigante roja de Orión, con una atmósfera variable y una superficie turbulenta. El aspecto animado es ilustrativo; su tamaño depende del modelo y de qué capa se mida.",
+    "en": "Betelgeuse is a red supergiant in Orion with a variable atmosphere and a turbulent surface. The animated appearance is illustrative; its size depends on the model and which layer is measured."
   },
   "folder": "Betelgeuse",
   "tags": [
@@ -32,8 +32,13 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "sphere",
-    "fidelity": "illustrative",
+    "fidelity": "procedural-stellar",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "stellarStyle": "red",
+    "textureSource": "https://science.nasa.gov/universe/what-is-betelgeuse-inside-the-strange-volatile-star/",
+    "note": "Recreación luminosa ilustrativa basada en su clase de estrella; color y turbulencia se interpretan para el visor. No es una cartografía fotográfica de su superficie, no muestra actividad actual y no reutiliza protuberancias solares como si estuvieran observadas.",
+    "reviewDate": "2026-10-13",
+    "effectExtent": 1.65
   }
 }

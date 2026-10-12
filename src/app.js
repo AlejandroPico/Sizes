@@ -6,6 +6,7 @@ import {icon} from './icons.js';
 import {qualities,nextQuality,qualitySettings,nextTheme,themeIcon,flag} from './presentation.js';
 import {buildTaxonomy,descendantObjects,nodeTitle,familyName,findNode} from './taxonomy.js';
 import {thumbnailSource,fillThumbnails} from './thumbnails.js';
+import {displayDimensions} from './representation.js';
 import {auditObject,auditSummary,reviewed} from './audit.js';
 import packageInfo from '../package.json';
 
@@ -44,6 +45,7 @@ function render(){
  for(const b of document.querySelectorAll('[data-add]'))b.onclick=()=>openPicker(null,b.dataset.add);
  $('#language').innerHTML=state.lang==='auto'?icon('globe'):flag(state.lang);
  resizeObserver?.disconnect();resizeObserver=new ResizeObserver(renderStage);resizeObserver.observe($('.scene-scroll'));
+ $('.scene-scroll').onscroll=()=>scene?.setViewport($('.scene-scroll').scrollLeft,$('.scene-scroll').scrollTop);
  tree=buildTaxonomy(state.catalog);applyTheme();renderStage();
 }
 function cutout(o,w,h,style=''){
@@ -53,20 +55,21 @@ function cutout(o,w,h,style=''){
 }
 async function renderStage(){
  const objects=selected(),scroll=$('.scene-scroll');if(!scroll)return;
- const height=Math.max(280,innerHeight),stage=$('#stage');currentLayout=layout(objects,scroll.clientWidth,height);
- stage.style.width=currentLayout.totalWidth+'px';stage.style.height=height+'px';
+ const height=Math.max(280,innerHeight),stage=$('#stage'),vertical=innerWidth<=900&&innerHeight>innerWidth;currentLayout=layout(objects,scroll.clientWidth,height,{vertical,quality:sceneUnavailable&&state.quality!=='vector'?'textured':state.quality});
+ scroll.dataset.orientation=vertical?'vertical':'horizontal';stage.dataset.orientation=scroll.dataset.orientation;
+ stage.style.width=currentLayout.totalWidth+'px';stage.style.height=(currentLayout.totalHeight||height)+'px';
  const environments=new Set(objects.map(o=>o.environment||o.category));stage.dataset.environment=environments.size===1?[...environments][0]:'neutral';
  const settings=qualitySettings(state.quality),rendered=state.quality!=='vector'&&!sceneUnavailable;
- $('#vectors').innerHTML=objects.map(o=>{const i=currentLayout.items.find(i=>i.id===o.id);if(!i||Math.max(i.width,i.height)<.6)return '';const position=`left:${i.x-i.width/2}px;bottom:${currentLayout.baseline}px`;return state.quality!=='vector'&&o.visual.image?`<div class="vector-object ${rendered?'hidden':''}" style="${position}">${cutout(o,i.width,i.height)}</div>`:`<img class="vector-object ${rendered?'hidden':''}" src="${asset(o,'silhouette')}" alt="${esc(name(o))}" style="${position};width:${i.width}px;height:${i.height}px">`;}).join('');
- $('#labels').innerHTML=objects.map(o=>{const i=currentLayout.items.find(i=>i.id===o.id),tiny=Math.max(i.width,i.height)<1;return `<div class="object-label object-control" style="left:${i.x}px;bottom:${currentLayout.baseline-66}px;width:${Math.min(210,i.slot-8)}px"><div class="object-controls-row"><button class="object-select" data-replace="${o.id}" title="${esc(t('replace'))}: ${esc(name(o))}"><strong>${esc(name(o))}</strong>${icon('chevron')}</button>${button(t('remove'),'x',`data-remove="${o.id}"`)}</div><button class="object-measure" data-detail="${o.id}">${readable(extent(o))}${tiny?`<em>${t('tiny')}</em>`:''}</button>${tiny?'<i class="tiny-marker" aria-hidden="true"></i>':''}</div>`;}).join('');
+ $('#vectors').innerHTML=objects.map(o=>{const i=currentLayout.items.find(i=>i.id===o.id);if(!i||Math.max(i.width,i.height)<.6)return '';const position=`left:${i.x-i.width/2}px;${vertical?`top:${i.centerY-i.height/2}px`:`bottom:${currentLayout.baseline}px`}`;return state.quality!=='vector'&&o.visual.image?`<div class="vector-object ${rendered?'hidden':''}" style="${position}">${cutout(o,i.width,i.height)}</div>`:`<img class="vector-object ${rendered?'hidden':''}" src="${asset(o,'silhouette')}" alt="${esc(name(o))}" style="${position};width:${i.width}px;height:${i.height}px">`;}).join('');
+ $('#labels').innerHTML=objects.map(o=>{const i=currentLayout.items.find(i=>i.id===o.id),tiny=Math.max(i.width,i.height)<1;return `<div class="object-label object-control" style="left:${i.x}px;${vertical?`top:${i.labelY}px`:`bottom:${currentLayout.baseline-66}px`};width:${Math.min(210,i.slot-8)}px"><div class="object-controls-row"><button class="object-select" data-replace="${o.id}" title="${esc(t('replace'))}: ${esc(name(o))}"><strong>${esc(name(o))}</strong>${icon('chevron')}</button>${button(t('remove'),'x',`data-remove="${o.id}"`)}</div><button class="object-measure" data-detail="${o.id}">${readable(extent(o))}${tiny?`<em>${t('tiny')}</em>`:''}</button>${tiny?'<i class="tiny-marker" aria-hidden="true"></i>':''}</div>`;}).join('');
  for(const b of document.querySelectorAll('[data-detail]'))b.onclick=()=>openEncyclopedia(b.dataset.detail);
  for(const b of document.querySelectorAll('[data-replace]'))b.onclick=()=>openPicker(b.dataset.replace);
  for(const b of document.querySelectorAll('[data-remove]'))b.onclick=()=>{state.selected=state.selected.filter(id=>id!==b.dataset.remove);changed();};
- const y=height-(currentLayout.baseline||height/2)+18;for(const b of document.querySelectorAll('.edge-add'))b.style.top=Math.min(height-40,Math.max(65,y))+'px';
+ const y=height-(currentLayout.baseline||height/2)+18;for(const b of document.querySelectorAll('.edge-add'))b.style.top=(vertical?(b.dataset.add==='start'?43:currentLayout.totalHeight-37):Math.min(height-40,Math.max(65,y)))+'px';
  if(rendered&&objects.length){
   sceneModule||=import('./scene.js');const {ComparisonScene}=await sceneModule;if($('#stage')!==stage)return;
   if(!scene)scene=new ComparisonScene(stage,()=>{sceneUnavailable=true;scene?.dispose();scene=null;renderStage();});
-  scene.update(objects,currentLayout,height,settings.mode,settings.textures,settings);
+  scene.update(objects,currentLayout,height,settings.mode,settings.textures,{...settings,viewportWidth:scroll.clientWidth,viewportHeight:scroll.clientHeight,scrollX:scroll.scrollLeft,scrollY:scroll.scrollTop});
  }else{scene?.dispose();scene=null;}
 }
 function changed(){updateUrl();renderStage();}
@@ -121,7 +124,7 @@ function bindPicker(root){
  };
 }
 function choose(id){const o=getObject(id);if(!o)return;if(o.status!=='ready'){openEncyclopedia(id);return;}if(state.selected.includes(id)&&state.replace!==id)return;
- if(state.replace)state.selected=state.selected.map(old=>old===state.replace?id:old);else if(state.insert==='start')state.selected.unshift(id);else state.selected.push(id);closeDialog();changed();requestAnimationFrame(()=>{const i=currentLayout.items.find(i=>i.id===id);if(i&&$('.scene-scroll'))$('.scene-scroll').scrollLeft=Math.max(0,i.x-$('.scene-scroll').clientWidth/2);});
+ if(state.replace)state.selected=state.selected.map(old=>old===state.replace?id:old);else if(state.insert==='start')state.selected.unshift(id);else state.selected.push(id);closeDialog();changed();requestAnimationFrame(()=>{const i=currentLayout.items.find(i=>i.id===id),scroll=$('.scene-scroll');if(i&&scroll){if(currentLayout.vertical)scroll.scrollTop=Math.max(0,i.centerY-scroll.clientHeight/2);else scroll.scrollLeft=Math.max(0,i.x-scroll.clientWidth/2);}});
 }
 
 const basisLabels={
@@ -129,7 +132,7 @@ const basisLabels={
 };
 const basis=o=>basisLabels[o.basis]?.[['es','ca'].includes(language())?0:1]||o.basis;
 const property=(key,field)=>key==='area'?`${new Intl.NumberFormat(language(),{maximumFractionDigits:2}).format(field.value/1e6)} km²`:esc(field.value+' '+field.unit);
-function previewLayout(o,w,h){const d=o.dimensions,scale=Math.min((w-32)/(o.visual.rings?.outerDiameter||d.width),(h-20)/d.height);return {totalWidth:w,pixelsPerMeter:scale,baseline:(h-d.height*scale)/2,items:[{id:o.id,x:w/2,width:d.width*scale,height:d.height*scale,slot:w,visualWidth:(o.visual.rings?.outerDiameter||d.width)*scale}]};}
+function previewLayout(o,w,h){const quality=sceneUnavailable&&state.quality!=='vector'?'textured':state.quality,d=displayDimensions(o,quality),visualWidth=o.visual.rings?.outerDiameter||d.width,effect=o.visual.effectExtent||1,scale=Math.min((w-32)/(visualWidth*effect),(h-20)/(d.height*effect));return {totalWidth:w,pixelsPerMeter:scale,baseline:(h-d.height*scale)/2,items:[{id:o.id,x:w/2,width:d.width*scale,height:d.height*scale,slot:w,visualWidth:visualWidth*effect*scale}]};}
 async function openEncyclopedia(id){
  const o=getObject(id)||selected()[0]||getObject('earth'),generation=modalGeneration+1;
  const ordered=[...selected(),...state.catalog.filter(a=>!state.selected.includes(a.id))];

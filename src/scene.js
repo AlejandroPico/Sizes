@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { asset } from './catalog.js';
+import {createSolarBody} from './solar.js';
+import {createGalaxy,createBlackHole,createCosmicVolume} from './cosmic.js';
+import {hasProcedural3d} from './representation.js';
 
 export class ComparisonScene {
  constructor(container,onFailure){
@@ -12,7 +15,7 @@ export class ComparisonScene {
   this.scene.add(new THREE.AmbientLight(0xffffff,1.7));const light=new THREE.DirectionalLight(0xffffff,2.8);light.position.set(-800,700,1400);this.scene.add(light);
   this.loader=new THREE.TextureLoader();this.gltf=new GLTFLoader();this.raycaster=new THREE.Raycaster();this.pointer=new THREE.Vector2();
   this.onDown=e=>{
-   if(this.mode!=='3d')return;
+   if(this.mode!=='3d'||e.pointerType==='touch')return;
    const rect=this.canvas.getBoundingClientRect();this.pointer.set((e.clientX-rect.left)/rect.width*2-1,-((e.clientY-rect.top)/rect.height)*2+1);
    this.raycaster.setFromCamera(this.pointer,this.camera);
    const hit=this.raycaster.intersectObjects([...this.groups.values()].map(g=>g.core),true)[0];
@@ -34,10 +37,27 @@ export class ComparisonScene {
   this.scene.add(root);this.groups.set(o.id,group);
   const normalize=()=>{core.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(core),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());const normalized=new THREE.Group();for(const child of [...core.children])normalized.add(child);normalized.position.sub(center);const wrapper=new THREE.Group();wrapper.add(normalized);wrapper.scale.set(1/(size.x||1),1/(size.y||1),1/(size.z||1));core.add(wrapper);};
   const bond=(a,b,color,radius=.018)=>{const direction=b.clone().sub(a);const mesh=new THREE.Mesh(new THREE.CylinderGeometry(radius,radius,direction.length(),10),new THREE.MeshStandardMaterial({color,roughness:.65}));mesh.position.copy(a).add(b).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),direction.normalize());core.add(mesh);};
-  if(o.visual.image){
-   const map=await this.loader.loadAsync(asset(o,'image')).catch(()=>null);if(generation!==this.generation){map?.dispose();return;}
-   if(map){map.colorSpace=THREE.SRGBColorSpace;const b=o.visual.imageBounds;if(b){map.repeat.set(b.width/b.imageWidth,b.height/b.imageHeight);map.offset.set(b.x/b.imageWidth,1-(b.y+b.height)/b.imageHeight);}}
+  const procedural=mode==='3d'&&!o.visual.glb&&hasProcedural3d(o);
+  if(o.family==='stars'){
+   group.solar=createSolarBody(core,root,{detailed:mode==='3d',style:o.visual.stellarStyle||'sun'});
+  }else if(o.family==='galaxies'){
+   createGalaxy(core,o.id);group.depthRatio=1;
+  }else if(o.family==='black-holes'){
+   group.solar=createBlackHole(core,root);group.depthRatio=1;
+  }else if(o.family==='cosmos'){
+   createCosmicVolume(core);
+  }else if(o.visual.image&&!procedural){
+   let map=await this.loader.loadAsync(asset(o,'image')).catch(()=>null);const imageLoaded=!!map;if(!map)map=await this.loader.loadAsync(asset(o,'silhouette')).catch(()=>null);if(generation!==this.generation){map?.dispose();return;}
+   if(map){map.colorSpace=THREE.SRGBColorSpace;const b=imageLoaded&&o.visual.imageBounds;if(b){map.repeat.set(b.width/b.imageWidth,b.height/b.imageHeight);map.offset.set(b.x/b.imageWidth,1-(b.y+b.height)/b.imageHeight);}}
    core.add(new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map,transparent:true,side:THREE.DoubleSide,depthWrite:false})));group.flat=true;
+  }else if(o.id==='red-blood-cell'){
+   const profile=[new THREE.Vector2(0,.03),new THREE.Vector2(.15,.055),new THREE.Vector2(.34,.13),new THREE.Vector2(.46,.08),new THREE.Vector2(.5,0),new THREE.Vector2(.46,-.08),new THREE.Vector2(.34,-.13),new THREE.Vector2(.15,-.055),new THREE.Vector2(0,-.03)];
+   const cell=new THREE.Mesh(new THREE.LatheGeometry(profile,64),new THREE.MeshPhysicalMaterial({color:'#a92d2e',roughness:.35,clearcoat:.3}));cell.rotation.x=Math.PI/2;core.add(cell);group.depthRatio=1;
+  }else if(o.visual.kind==='sperm'){
+   const cellMaterial=new THREE.MeshPhysicalMaterial({color:'#d5e4e2',roughness:.3,clearcoat:.4});
+   const head=new THREE.Mesh(new THREE.SphereGeometry(1,24,16),cellMaterial);head.scale.set(.045,.27,.22);head.position.x=-.455;core.add(head);
+   const points=[];for(let i=0;i<=64;i++){const u=i/64;points.push(new THREE.Vector3(-.41+u*.91,Math.sin(u*9.)*u*.3,Math.sin(u*6.)*.03*u));}
+   core.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),64,.009,8,false),cellMaterial));group.depthRatio=.15;
   }else if(o.visual.kind==='atom'){
    core.add(new THREE.Mesh(new THREE.SphereGeometry(.5,32,24),new THREE.MeshBasicMaterial({color:'#93c8ec',transparent:true,opacity:.1,depthWrite:false})));
    core.add(new THREE.Mesh(new THREE.SphereGeometry(.09,20,16),new THREE.MeshStandardMaterial({color:'#f0a17b',roughness:.5})));
@@ -51,23 +71,22 @@ export class ComparisonScene {
   }else if(o.visual.kind==='virus'){
    core.add(new THREE.Mesh(new THREE.SphereGeometry(.39,32,24),new THREE.MeshStandardMaterial({color:'#a6b3ae',roughness:.9})));for(let i=0;i<55;i++){const y=1-2*(i+.5)/55,a=i*2.39996,r=Math.sqrt(1-y*y),p=new THREE.Vector3(r*Math.cos(a),y,r*Math.sin(a));bond(p.clone().multiplyScalar(.37),p.clone().multiplyScalar(.47),'#c38984',.013);const tip=new THREE.Mesh(new THREE.SphereGeometry(.03,8,6),new THREE.MeshStandardMaterial({color:'#cf9089'}));tip.position.copy(p).multiplyScalar(.47);core.add(tip);}
   }else if(o.visual.kind==='bacterium'){
-   const body=new THREE.Mesh(new THREE.CapsuleGeometry(.22,.6,10,24),new THREE.MeshStandardMaterial({color:'#9bcaa7',roughness:.55}));body.rotation.z=Math.PI/2;core.add(body);normalize();
+   const body=new THREE.Mesh(new THREE.CapsuleGeometry(.22,.6,10,24),new THREE.MeshPhysicalMaterial({color:'#9bcaa7',roughness:.45,clearcoat:.2}));body.rotation.z=Math.PI/2;core.add(body);
+   normalize();
   }else if(o.category==='space'&&['sphere','ellipsoid'].includes(o.visual.kind)||o.category==='quantum'&&o.visual.kind==='sphere'||o.category==='micro'&&o.visual.kind==='sphere'){
    const geo=new THREE.SphereGeometry(.5,this.segments||48,Math.round((this.segments||48)*.66));
    const mesh=new THREE.Mesh(geo,material);core.add(mesh);
-   if(o.id==='sun'){material.emissive=new THREE.Color('#ef7020');material.emissiveIntensity=.8;group.sun=true;}
-   if(textures&&o.visual.texture){const tex=await this.loader.loadAsync(asset(o,'texture')).catch(()=>null);if(generation!==this.generation){tex?.dispose();return;}if(tex){tex.colorSpace=THREE.SRGBColorSpace;material.map=tex;material.color.set('#fff');material.needsUpdate=true;}}
+   if(textures&&o.visual.texture){const tex=await this.loader.loadAsync(asset(o,(mode==='2d'||this.viewportWidth<600)&&o.visual.textureLow?'textureLow':'texture')).catch(()=>null);if(generation!==this.generation){tex?.dispose();return;}if(tex){tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());material.map=tex;material.color.set('#fff');material.needsUpdate=true;}}
    if(textures&&o.visual.clouds){const map=await this.loader.loadAsync(asset(o,'clouds')).catch(()=>null);if(generation!==this.generation){map?.dispose();return;}if(map){const clouds=new THREE.Mesh(geo.clone(),new THREE.MeshStandardMaterial({map,transparent:true,opacity:.65,depthWrite:false}));clouds.scale.setScalar(1.006);core.add(clouds);group.clouds=clouds;}}
    if(o.visual.rings){
     const inner=o.visual.rings.innerDiameter/o.dimensions.width/2,outer=o.visual.rings.outerDiameter/o.dimensions.width/2;
-    const rings=new THREE.Mesh(new THREE.RingGeometry(inner,outer,100),new THREE.MeshBasicMaterial({color:'#d4ba8b',side:THREE.DoubleSide,transparent:true,opacity:.55}));
+    const geometry=new THREE.RingGeometry(inner,outer,160),uv=geometry.attributes.uv,position=geometry.attributes.position;
+    for(let i=0;i<position.count;i++)uv.setXY(i,(Math.hypot(position.getX(i),position.getY(i))-inner)/(outer-inner),.5);
+    const ringMaterial=new THREE.MeshBasicMaterial({color:o.visual.ringTexture?'#fff':'#d4ba8b',side:THREE.DoubleSide,transparent:true,opacity:o.visual.ringTexture ? .95 : .55,depthWrite:false});
+    if(o.visual.ringTexture){const map=await this.loader.loadAsync(asset(o,'ringTexture')).catch(()=>null);if(generation!==this.generation){map?.dispose();return;}if(map){map.colorSpace=THREE.SRGBColorSpace;ringMaterial.map=map;ringMaterial.needsUpdate=true;}}
+    const rings=new THREE.Mesh(geometry,ringMaterial);
     rings.rotation.x=-Math.PI*.38;rings.rotation.z=-.15;core.add(rings);
    }
-   if(group.sun&&textures){const halo=new THREE.Mesh(new THREE.SphereGeometry(.508,32,24),new THREE.MeshBasicMaterial({color:'#ffac4c',transparent:true,opacity:.14,side:THREE.BackSide}));core.add(halo);group.halo=halo;
-    for(let i=0;i<9;i++){const arc=new THREE.Mesh(new THREE.TorusGeometry(.032+.005*(i%3),.002,6,20,Math.PI*1.65),new THREE.MeshBasicMaterial({color:'#ff9b3e',transparent:true,opacity:.6}));const a=i/9*Math.PI*2;arc.position.set(Math.sin(a)*.49,Math.cos(a)*.49,0);arc.rotation.z=-a;core.add(arc);}
-   }
-  }else if(mode==='3d'&&o.category==='buildings'){
-   for(let i=0;i<5;i++){const level=new THREE.Mesh(new THREE.BoxGeometry(1-i*.15,.2,1-i*.15),material);level.position.y=-.4+i*.2;core.add(level);}
   }else{
    const map=await this.loader.loadAsync(asset(o,'silhouette')).catch(()=>null);
    if(generation!==this.generation){map?.dispose();return;}
@@ -79,27 +98,34 @@ export class ComparisonScene {
    if(gltf){for(const n of [...core.children]){core.remove(n);n.geometry?.dispose();if(n.material!==material)n.material?.dispose?.();}
     if(!textures)gltf.scene.traverse(n=>{if(n.isMesh){const materials=Array.isArray(n.material)?n.material:[n.material];for(const m of materials){m.map?.dispose();m.dispose();}n.material=material;}});
     const model=gltf.scene;model.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());
-    model.position.sub(center);const normalized=new THREE.Group();normalized.add(model);normalized.scale.set(1/(size.x||1),1/(size.y||1),1/(size.z||1));core.add(normalized);group.flat=false;
+    model.position.sub(center);const normalized=new THREE.Group();normalized.add(model);if(o.visual.preserveModelAspect)normalized.scale.setScalar(1/Math.max(size.x,size.y,size.z));else normalized.scale.set(1/(size.x||1),1/(size.y||1),1/(size.z||1));core.add(normalized);group.flat=false;
    }
   }
   return group;
  }
  update(objects,layout,height,mode,textures,options={}){
   if(!this.renderer)return;
-  const signature=objects.map(o=>o.id).join(',')+mode+textures+(options.segments||48);
+  const signature=objects.map(o=>o.id).join(',')+mode+textures+(options.segments||48)+(options.viewportWidth<600?'mobile':'wide');
   this.segments=options.segments||48;this.renderer.setPixelRatio(Math.min(devicePixelRatio,options.pixelRatio||1.75));
-  this.mode=mode;this.height=height;this.width=layout.totalWidth;this.baseline=layout.baseline||75;
+  this.mode=mode;this.height=layout.totalHeight||height;this.width=layout.totalWidth;this.baseline=layout.baseline||75;this.vertical=!!layout.vertical;
   // One continuous shared orthographic frame: projected meters use the same scale.
-  this.renderer.setSize(layout.totalWidth,height);this.camera.left=0;this.camera.right=layout.totalWidth;this.camera.top=height;this.camera.bottom=0;this.camera.updateProjectionMatrix();
+  this.viewportWidth=options.viewportWidth||layout.totalWidth;this.viewportHeight=options.viewportHeight||height;this.setViewport(options.scrollX||0,options.scrollY||0);
   if(signature!==this.signature){
    const oldTargets=new Map([...this.groups].map(([id,g])=>[id,g.current]));
+   const orientations=new Map([...this.groups].map(([id,g])=>[id,{rotation:g.core.rotation.clone(),userRotated:g.userRotated}]));
    this.signature=signature;this.generation++;const gen=this.generation;
    for(const g of this.groups.values())this.disposeObject(g);this.groups.clear();
    for(const o of objects){const item=layout.items.find(i=>i.id===o.id);if(item.width<.6&&item.height<.6)continue;
-    this.make(o,mode,textures,gen);const g=this.groups.get(o.id);g.current=oldTargets.get(o.id)||{x:item.x,width:item.width,height:item.height};g.target=item;
+    this.make(o,mode,textures,gen);const g=this.groups.get(o.id);g.current=oldTargets.get(o.id)||{x:item.x,centerY:item.centerY||0,width:item.width,height:item.height};g.target=item;const orientation=orientations.get(o.id);if(orientation){g.core.rotation.copy(orientation.rotation);g.userRotated=orientation.userRotated;}
    }
   }
   for(const [id,g] of this.groups){g.target=layout.items.find(i=>i.id===id);}
+ }
+ setViewport(x=0,y=0){
+  if(!this.renderer)return;
+  if(this.canvas.clientWidth!==this.viewportWidth||this.canvas.clientHeight!==this.viewportHeight)this.renderer.setSize(this.viewportWidth,this.viewportHeight);
+  this.canvas.style.transform=`translate(${x}px,${y}px)`;
+  this.camera.left=x;this.camera.right=x+this.viewportWidth;this.camera.top=this.height-y;this.camera.bottom=this.height-y-this.viewportHeight;this.camera.updateProjectionMatrix();
  }
  tick(now){
   if(!this.active||!this.renderer)return;
@@ -109,11 +135,12 @@ export class ComparisonScene {
    for(const g of this.groups.values()){
     if(!g.target)continue;const a=this.reduced?1:1-Math.exp(-dt*9);
     for(const k of ['x','width','height'])g.current[k]+=(g.target[k]-g.current[k])*a;
+    g.current.centerY+=((g.target.centerY||0)-g.current.centerY)*a;
     const {x,width,height}=g.current;
-    g.root.position.set(x,this.baseline+height/2,0);g.root.scale.set(width,height,g.flat?1:(g.o.dimensions.depth||Math.min(g.o.dimensions.width,g.o.dimensions.height)*.5)*width/g.o.dimensions.width);
+    g.root.position.set(x,this.vertical?this.height-g.current.centerY:this.baseline+height/2,0);if(g.o.visual.preserveModelAspect&&!g.flat)g.root.scale.setScalar(Math.max(width,height));else g.root.scale.set(width,height,g.flat?1:g.depthRatio?width*g.depthRatio:(g.o.dimensions.depth||Math.min(g.o.dimensions.width,g.o.dimensions.height)*.5)*width/g.o.dimensions.width);
     if(this.mode==='3d'&&!this.reduced&&!g.userRotated&&!g.flat)g.core.rotation.y+=dt*.09;
     if(g.clouds&&this.mode==='3d'&&!this.reduced)g.clouds.rotation.y+=dt*.012;
-    if(g.halo&&!this.reduced)g.halo.material.opacity=.1+.04*Math.sin(this.time*1.2);
+    if(g.solar)g.solar.time.value=this.reduced?0:this.time;
    }
    this.renderer.render(this.scene,this.camera);
   }

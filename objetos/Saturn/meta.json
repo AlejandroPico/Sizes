@@ -28,16 +28,25 @@
   },
   "visual": {
     "kind": "sphere",
-    "fidelity": "observed-texture",
+    "fidelity": "agency-map",
     "silhouette": "silhouette.svg",
     "model": "model.json",
-    "texture": "texture.jpg",
+    "texture": "texture-hd.jpg",
     "clouds": null,
     "glb": null,
     "rings": {
       "outerDiameter": 273560000,
-      "innerDiameter": 149316000
-    }
+      "innerDiameter": 149316000,
+      "textureSource": "https://science.nasa.gov/resource/saturn-3d-model/",
+      "textureDefinition": "Franja radial RGBA original NASA/VTAD de 4096 × 16; U interior→exterior. Su proyección es ilustrativa y no cambia las medidas guardadas."
+    },
+    "textureLow": "texture.jpg",
+    "textureSource": "https://science.nasa.gov/resource/saturn-3d-model/",
+    "textureProcessing": "Proyección equirectangular con Three.js del material original NASA/VTAD, sin luz añadida ni detalle generado.",
+    "sourceDataURL": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/s/Saturn_1_120536.glb",
+    "note": "Cartografía del recurso NASA/VTAD. Cobertura y resolución variables; las nubes y colores corresponden al material distribuido y no a meteorología en directo.",
+    "reviewDate": "2026-10-13",
+    "ringTexture": "rings.png"
   },
   "folder": "Saturn",
   "tags": [

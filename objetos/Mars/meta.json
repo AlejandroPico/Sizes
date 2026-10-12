@@ -28,13 +28,23 @@
   },
   "visual": {
     "kind": "sphere",
-    "fidelity": "observed-texture",
+    "fidelity": "observed-colorized-map",
     "silhouette": "silhouette.svg",
     "model": "model.json",
-    "texture": "texture.jpg",
+    "texture": "texture-hd.jpg",
     "clouds": null,
     "glb": null,
-    "rings": null
+    "rings": null,
+    "textureLow": "texture.jpg",
+    "textureSource": "https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m",
+    "sourceDataURL": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/5ea881c6-01b3-41fa-a7af-42d2131b54f1/download/mars_viking_mdim21_clrmosaic_1km.jpg",
+    "sourceImagePixelDimensions": [
+      21339,
+      10670
+    ],
+    "textureProcessing": "Mosaico colorizado Viking/MDIM2.1 USGS, preparado con Three.js como material esférico sin luz añadida y exportado a 4096 × 2048; no se genera detalle nuevo.",
+    "note": "Mosaico de observaciones Viking, colorizado por USGS sobre MDIM2.1. Conserva sombras y variaciones de las imágenes originales; sus colores procesados no son una fotografía actual ni una medición de relieve.",
+    "reviewDate": "2026-10-13"
   },
   "folder": "Mars",
   "tags": [

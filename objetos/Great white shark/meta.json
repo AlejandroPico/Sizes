@@ -49,6 +49,8 @@
       "type": "generated-illustration",
       "date": "2026-10-12",
       "observed": false
-    }
+    },
+    "imageScaleBasis": "width",
+    "note": "Recorte ilustrativo con proporciones originales, anclado a la altura o longitud de referencia. El eje transversal y la pose no constituyen medidas anatómicas independientes."
   }
 }

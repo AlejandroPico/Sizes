@@ -32,8 +32,9 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "galaxy",
-    "fidelity": "illustrative",
+    "fidelity": "procedural-illustrative",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "note": "Estructura espiral ilustrativa con estrellas y polvo, no reconstrucción observada de cada estrella. El diámetro de referencia corresponde al disco estelar."
   }
 }

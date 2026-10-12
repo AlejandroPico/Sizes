@@ -32,8 +32,30 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "giraffe",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "image": "image.png",
+    "imageBounds": {
+      "x": 112,
+      "y": 12,
+      "width": 1097,
+      "height": 1164,
+      "imageWidth": 1312,
+      "imageHeight": 1199
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-13",
+      "observed": false,
+      "promptFile": "data/image-prompts-0.3.json",
+      "notes": "Ilustración educativa generada. Morfología y colores interpretativos; no fotografía ni modelo anatómico observado."
+    },
+    "imageScaleBasis": "height",
+    "note": {
+      "es": "El recorte conserva su proporción original y se ancla a la altura de referencia del catálogo. La anchura visible depende de la postura y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico.",
+      "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference height. Visible width depends on pose and is illustrative. It is a generated illustration, not a photograph or anatomical scan."
+    }
   }
 }

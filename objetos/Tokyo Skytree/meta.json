@@ -17,10 +17,28 @@
   "color": "#c5d1d6",
   "visual": {
     "kind": "tower",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json",
-    "schematicWidth": true
+    "model": null,
+    "schematicWidth": true,
+    "image": "image-0.3.png",
+    "imageBounds": {
+      "x": 400,
+      "y": 11,
+      "width": 224,
+      "height": 1518,
+      "imageWidth": 1024,
+      "imageHeight": 1536
+    },
+    "imageProvenance": {
+      "provider": "OpenAI image_gen",
+      "date": "2026-10-13",
+      "observed": false,
+      "references": [
+        "https://www.tokyo-skytree.jp/about/outline/"
+      ],
+      "description": "Ilustración arquitectónica generada basada en especificaciones oficiales. No es fotografía, escaneo ni geometría medida."
+    }
   },
   "folder": "Tokyo Skytree",
   "tags": [

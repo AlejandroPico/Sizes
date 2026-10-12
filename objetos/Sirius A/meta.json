@@ -14,11 +14,11 @@
   },
   "shape": "sphere",
   "basis": "mean-diameter",
-  "color": "#aabcc9",
+  "color": "#c9e6ff",
   "measurementStatus": "estimated",
   "summary": {
-    "es": "Escala astronómica aproximada. El valor depende de la definición del borde y del modelo de medida indicado en esta ficha.",
-    "en": "Approximate astronomical scale. The value depends on the boundary definition and the measurement model stated in this entry."
+    "es": "Sirio A es una estrella blanca azulada y la componente brillante del sistema de Sirio. Su superficie luminosa en este visor es una ilustración: no se dispone de una fotografía global resuelta que pueda usarse como textura.",
+    "en": "Sirius A is a bluish-white star and the bright component of the Sirius system. Its luminous surface here is an illustration, not a globally resolved photographic texture."
   },
   "folder": "Sirius A",
   "tags": [
@@ -32,8 +32,13 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "sphere",
-    "fidelity": "illustrative",
+    "fidelity": "procedural-stellar",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "stellarStyle": "blue",
+    "textureSource": "https://science.nasa.gov/asset/hubble/an-artists-impression-of-sirius-a-and-sirius-b/",
+    "note": "Recreación luminosa ilustrativa basada en su clase de estrella; color y turbulencia se interpretan para el visor. No es una cartografía fotográfica de su superficie, no muestra actividad actual y no reutiliza protuberancias solares como si estuvieran observadas.",
+    "reviewDate": "2026-10-13",
+    "effectExtent": 1.65
   }
 }

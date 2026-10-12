@@ -3,6 +3,8 @@ dist/
 public/objetos/
 public/catalog.sqlite
 public/quality-report.json
+public/visual-review.json
+public/visual-review.md
 data/*.tmp
 public/AGENTS.md
 public/sql-wasm.wasm

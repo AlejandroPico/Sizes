@@ -17,12 +17,13 @@
   "measurementStatus": "measured",
   "color": "#ffb16c",
   "summary": {
-    "es": "La estrella del Sistema Solar. La textura procede de observaciones solares. La corona y las protuberancias animadas son una ilustración; no muestran actividad solar en directo.",
-    "en": "The star of the Solar System. Texture derived from solar observations. The animated corona and prominences are illustrative, not live solar activity."
+    "es": "La estrella del Sistema Solar. La representación animada recrea la granulación, la corona y los filamentos de plasma con color y tiempo realzados para su observación. Es una ilustración inspirada en fenómenos solares, no actividad solar en directo. La medida corresponde a la fotosfera y excluye el resplandor exterior.",
+    "en": "The star of the Solar System. This animated rendering illustrates granulation, the corona and plasma filaments with enhanced color and time. It is inspired by solar phenomena, not live solar activity. The measurement refers to the photosphere, excluding the outer glow."
   },
   "visual": {
     "kind": "sphere",
-    "fidelity": "observed-texture",
+    "fidelity": "procedural-cinematic",
+    "effectExtent": 1.65,
     "silhouette": "silhouette.svg",
     "model": "model.json",
     "texture": "texture.jpg"
@@ -35,6 +36,6 @@
   "environment": "space",
   "reviewStatus": "initial",
   "status": "ready",
-  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+  "source": "https://science.nasa.gov/sun/facts/",
   "sourceRetrieved": "2026-10-12"
 }

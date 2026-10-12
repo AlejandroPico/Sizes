@@ -32,8 +32,9 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "sphere",
-    "fidelity": "illustrative",
+    "fidelity": "procedural-illustrative",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "note": "Esfera conceptual de volumen observable con una red cósmica ilustrativa. No es una fotografía del universo desde fuera ni un mapa observado de cada estructura."
   }
 }

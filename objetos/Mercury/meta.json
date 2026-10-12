@@ -28,13 +28,20 @@
   },
   "visual": {
     "kind": "sphere",
-    "fidelity": "observed-texture",
+    "fidelity": "agency-map",
     "silhouette": "silhouette.svg",
     "model": "model.json",
-    "texture": "texture.jpg",
+    "texture": "texture-hd.jpg",
     "clouds": null,
     "glb": null,
-    "rings": null
+    "rings": null,
+    "textureLow": "texture-hd.jpg",
+    "textureSource": "https://science.nasa.gov/resource/mercury-3d-model/",
+    "textureProcessing": "Proyección equirectangular con Three.js del material original NASA/VTAD, sin luz añadida ni detalle generado.",
+    "enhancedTexture": "texture.jpg",
+    "enhancedTextureSource": "https://images.nasa.gov/details/PIA17386",
+    "note": "Apariencia superficial del modelo NASA; se conserva aparte el mosaico MESSENGER de color realzado. Los colores y la resolución no equivalen a una vista en directo.",
+    "reviewDate": "2026-10-13"
   },
   "folder": "Mercury",
   "tags": [

@@ -32,8 +32,30 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "ant",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": "model.json",
+    "image": "image.png",
+    "imageBounds": {
+      "x": 45,
+      "y": 180,
+      "width": 1425,
+      "height": 705,
+      "imageWidth": 1536,
+      "imageHeight": 1024
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-13",
+      "observed": false,
+      "promptFile": "data/image-prompts-0.3.json",
+      "notes": "Ilustración educativa generada. Morfología y colores interpretativos; no fotografía ni modelo anatómico observado."
+    },
+    "imageScaleBasis": "width",
+    "note": {
+      "es": "El recorte conserva su proporción original y se ancla a la longitud o diámetro horizontal de referencia del catálogo. La altura visible depende de la postura y de los apéndices, y es ilustrativa. Es una ilustración generada, no una fotografía ni un escaneo anatómico o técnico.",
+      "en": "The cutout preserves its original aspect ratio and is anchored to catalogue reference horizontal length or diameter. Visible height depends on pose and appendages and is illustrative. It is a generated illustration, not a photograph or anatomical or technical scan."
+    }
   }
 }
