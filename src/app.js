@@ -40,7 +40,7 @@ function render(){
  $('#about').onclick=e=>e.altKey?openInternal():openAbout();
  $('#close-modal').onclick=closeDialog;
  $('#modal').addEventListener('click',e=>{if(e.target===$('#modal'))closeDialog();});
- $('#modal').addEventListener('close',()=>{cleanupModal();scene&&(scene.visible=true);previousFocus?.isConnected&&previousFocus.focus();});
+ $('#modal').addEventListener('close',()=>{if(!$('#modal').open)finishModalClose();});
  for(const b of document.querySelectorAll('[data-add]'))b.onclick=()=>openPicker(null,b.dataset.add);
  $('#language').innerHTML=state.lang==='auto'?icon('globe'):flag(state.lang);
  resizeObserver?.disconnect();resizeObserver=new ResizeObserver(renderStage);resizeObserver.observe($('.scene-scroll'));
@@ -75,7 +75,8 @@ function showDialog(title,body,{wide=false,kind='',tools=''}={}){
  cleanupModal();closeLanguage();const modal=$('#modal');if(!modal.open)previousFocus=document.activeElement;
  $('#modal-title').textContent=title;$('#modal-head-tools').innerHTML=tools;$('#modal-body').innerHTML=body;modal.className=[wide?'wide':'',kind].join(' ');if(!modal.open)modal.showModal();scene&&(scene.visible=false);
 }
-function closeDialog(){$('#modal').close();}
+function finishModalClose(){cleanupModal();scene&&(scene.visible=true);previousFocus?.isConnected&&previousFocus.focus();}
+function closeDialog(){finishModalClose();$('#modal').close();}
 function closeLanguage(){const menu=$('#language-menu');if(menu)menu.hidden=true;$('#language')?.setAttribute('aria-expanded','false');}
 function toggleLanguage(){
  const menu=$('#language-menu');if(!menu.hidden){closeLanguage();return;}
