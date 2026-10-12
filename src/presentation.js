@@ -1,0 +1,12 @@
+export const qualities=['3d','textured','vector'];
+export const nextQuality=current=>qualities[(qualities.indexOf(current)+1)%qualities.length];
+export const qualitySettings=quality=>quality==='3d'?{mode:'3d',textures:true,pixelRatio:1.75,segments:64}:quality==='textured'?{mode:'2d',textures:true,pixelRatio:1,segments:24}:{mode:'2d',textures:false,pixelRatio:1,segments:24};
+export const themeOrder=['auto','morning','afternoon','night'];
+export const nextTheme=current=>themeOrder[(themeOrder.indexOf(current)+1)%themeOrder.length];
+export const themeIcon=theme=>({auto:'contrast',morning:'sun',afternoon:'sunset',night:'moon'})[theme]||'contrast';
+const star=(cx,cy,r)=>Array.from({length:10},(_,i)=>{const a=-Math.PI/2+i*Math.PI/5,rad=i%2?r*.38:r;return `${cx+Math.cos(a)*rad},${cy+Math.sin(a)*rad}`;}).join(' ');
+export function flag(language){
+ const bands=(colors,vertical=true)=>colors.map((color,i)=>`<rect ${vertical?`x="${i*24/colors.length}" width="${24/colors.length}" height="16"`:`y="${i*16/colors.length}" height="${16/colors.length}" width="24"`} fill="${color}"/>`).join('');
+ const flags={es:'<path fill="#aa151b" d="M0 0h24v16H0z"/><path fill="#f1bf00" d="M0 4h24v8H0z"/>',ca:bands(['#f9d744','#c93432','#f9d744','#c93432','#f9d744','#c93432','#f9d744','#c93432','#f9d744'],false),fr:bands(['#163a88','#fff','#e83b44']),de:bands(['#171717','#d63438','#f6cf49'],false),pt:'<path fill="#e13136" d="M0 0h24v16H0z"/><path fill="#117547" d="M0 0h10v16H0z"/><circle cx="10" cy="8" r="3" fill="#f7d94c"/><path d="M8.5 6.5h3v3l-1.5 1-1.5-1z" fill="#d52c39"/>',it:bands(['#16875c','#fff','#d8444a']),ja:'<path fill="#fff" d="M0 0h24v16H0z"/><circle cx="12" cy="8" r="4.5" fill="#b7263f"/>',zh:`<path fill="#de2929" d="M0 0h24v16H0z"/><polygon points="${star(5,5,2.8)}" fill="#ffdc45"/>${[[9,2.5],[11,4.5],[11,7],[9,9]].map(([x,y])=>`<polygon points="${star(x,y,1)}" fill="#ffdc45"/>`).join('')}`,hi:bands(['#ef923d','#fff','#198646'],false)+'<circle cx="12" cy="8" r="2.1" fill="none" stroke="#244083" stroke-width=".5"/><path d="M12 6v4m-2-2h4m-3.4-1.4 2.8 2.8m0-2.8-2.8 2.8" stroke="#244083" stroke-width=".4"/>',en:'<path fill="#183b73" d="M0 0h24v16H0z"/><path d="m0 0 24 16m0-16L0 16" stroke="#fff" stroke-width="5"/><path d="m0 0 24 16m0-16L0 16" stroke="#ce3547" stroke-width="2"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="6"/><path d="M12 0v16M0 8h24" stroke="#ce3547" stroke-width="3.5"/>'};
+ return `<svg class="flag" viewBox="0 0 24 16" aria-hidden="true">${flags[language]||flags.en}</svg>`;
+}

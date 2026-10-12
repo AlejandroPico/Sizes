@@ -32,8 +32,23 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "dog",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": null,
+    "image": "image.png",
+    "imageBounds": {
+      "x": 30,
+      "y": 40,
+      "width": 1490,
+      "height": 949,
+      "imageWidth": 1536,
+      "imageHeight": 1024
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-12",
+      "observed": false
+    }
   }
 }

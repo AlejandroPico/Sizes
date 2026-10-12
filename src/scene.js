@@ -17,7 +17,7 @@ export class ComparisonScene {
    this.raycaster.setFromCamera(this.pointer,this.camera);
    const hit=this.raycaster.intersectObjects([...this.groups.values()].map(g=>g.core),true)[0];
    if(!hit)return;let node=hit.object;while(node&&!node.userData.objectId)node=node.parent;
-   const group=this.groups.get(node?.userData.objectId);if(!group)return;
+   const group=this.groups.get(node?.userData.objectId);if(!group||group.flat)return;
    this.drag={group,x:e.clientX,y:e.clientY};this.canvas.setPointerCapture(e.pointerId);
   };
   this.onMove=e=>{if(!this.drag)return;const {group,x,y}=this.drag;group.core.rotation.y+=(e.clientX-x)*.008;group.core.rotation.x+=(e.clientY-y)*.008;this.drag.x=e.clientX;this.drag.y=e.clientY;group.userRotated=true;};
@@ -32,8 +32,28 @@ export class ComparisonScene {
   const material=new THREE.MeshStandardMaterial({color:o.color,roughness:.88,metalness:0});
   const group={root,core,o,current:null,target:null,material};
   this.scene.add(root);this.groups.set(o.id,group);
-  if(o.category==='space'&&['sphere','ellipsoid'].includes(o.visual.kind)||o.category==='quantum'&&o.visual.kind==='sphere'||o.category==='micro'&&o.visual.kind==='sphere'){
-   const geo=new THREE.SphereGeometry(.5,48,32);
+  const normalize=()=>{core.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(core),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());const normalized=new THREE.Group();for(const child of [...core.children])normalized.add(child);normalized.position.sub(center);const wrapper=new THREE.Group();wrapper.add(normalized);wrapper.scale.set(1/(size.x||1),1/(size.y||1),1/(size.z||1));core.add(wrapper);};
+  const bond=(a,b,color,radius=.018)=>{const direction=b.clone().sub(a);const mesh=new THREE.Mesh(new THREE.CylinderGeometry(radius,radius,direction.length(),10),new THREE.MeshStandardMaterial({color,roughness:.65}));mesh.position.copy(a).add(b).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),direction.normalize());core.add(mesh);};
+  if(o.visual.image){
+   const map=await this.loader.loadAsync(asset(o,'image')).catch(()=>null);if(generation!==this.generation){map?.dispose();return;}
+   if(map){map.colorSpace=THREE.SRGBColorSpace;const b=o.visual.imageBounds;if(b){map.repeat.set(b.width/b.imageWidth,b.height/b.imageHeight);map.offset.set(b.x/b.imageWidth,1-(b.y+b.height)/b.imageHeight);}}
+   core.add(new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map,transparent:true,side:THREE.DoubleSide,depthWrite:false})));group.flat=true;
+  }else if(o.visual.kind==='atom'){
+   core.add(new THREE.Mesh(new THREE.SphereGeometry(.5,32,24),new THREE.MeshBasicMaterial({color:'#93c8ec',transparent:true,opacity:.1,depthWrite:false})));
+   core.add(new THREE.Mesh(new THREE.SphereGeometry(.09,20,16),new THREE.MeshStandardMaterial({color:'#f0a17b',roughness:.5})));
+   for(let n=0;n<3;n++){const curve=new THREE.EllipseCurve(0,0,.46,.23,0,2*Math.PI,false,0);const ring=new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(curve.getPoints(96)),new THREE.LineBasicMaterial({color:'#a8dce9',transparent:true,opacity:.8}));ring.rotation.z=n*Math.PI/3;core.add(ring);const electron=new THREE.Mesh(new THREE.SphereGeometry(.025,12,8),new THREE.MeshBasicMaterial({color:'#c5eaff'}));electron.position.set(Math.cos(n*2.1)*.43,Math.sin(n*2.1)*.2,0);core.add(electron);}
+  }else if(o.visual.kind==='dna'){
+   const points=[[],[]];for(let n=0;n<=160;n++){const y=n/160-.5,angle=n/160*Math.PI*4;for(let strand=0;strand<2;strand++)points[strand].push(new THREE.Vector3(Math.cos(angle+strand*Math.PI)*.46,y,Math.sin(angle+strand*Math.PI)*.46));}
+   for(let strand=0;strand<2;strand++)core.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points[strand]),160,.025,8,false),new THREE.MeshStandardMaterial({color:strand?'#e7bb81':'#85c5df',roughness:.55})));
+   for(let n=0;n<20;n++){const y=(n+.5)/20-.5,angle=(n+.5)/20*Math.PI*4;const a=new THREE.Vector3(Math.cos(angle)*.46,y,Math.sin(angle)*.46),b=new THREE.Vector3(-a.x,y,-a.z);bond(a,b,n%2?'#bbcacc':'#cc9faf',.012);}normalize();
+  }else if(o.id==='water'){
+   const oxygen=new THREE.Mesh(new THREE.SphereGeometry(.25,28,20),new THREE.MeshStandardMaterial({color:'#d9746f',roughness:.35}));oxygen.position.set(-.08,0,0);core.add(oxygen);const halfAngle=52.25*Math.PI/180;for(const sign of [-1,1]){const p=new THREE.Vector3(-.08+.5*Math.cos(halfAngle),sign*.5*Math.sin(halfAngle),0);const hydrogen=new THREE.Mesh(new THREE.SphereGeometry(.15,20,16),new THREE.MeshStandardMaterial({color:'#e4e9e8',roughness:.35}));hydrogen.position.copy(p);core.add(hydrogen);bond(oxygen.position,p,'#bec4c4',.045);}normalize();
+  }else if(o.visual.kind==='virus'){
+   core.add(new THREE.Mesh(new THREE.SphereGeometry(.39,32,24),new THREE.MeshStandardMaterial({color:'#a6b3ae',roughness:.9})));for(let i=0;i<55;i++){const y=1-2*(i+.5)/55,a=i*2.39996,r=Math.sqrt(1-y*y),p=new THREE.Vector3(r*Math.cos(a),y,r*Math.sin(a));bond(p.clone().multiplyScalar(.37),p.clone().multiplyScalar(.47),'#c38984',.013);const tip=new THREE.Mesh(new THREE.SphereGeometry(.03,8,6),new THREE.MeshStandardMaterial({color:'#cf9089'}));tip.position.copy(p).multiplyScalar(.47);core.add(tip);}
+  }else if(o.visual.kind==='bacterium'){
+   const body=new THREE.Mesh(new THREE.CapsuleGeometry(.22,.6,10,24),new THREE.MeshStandardMaterial({color:'#9bcaa7',roughness:.55}));body.rotation.z=Math.PI/2;core.add(body);normalize();
+  }else if(o.category==='space'&&['sphere','ellipsoid'].includes(o.visual.kind)||o.category==='quantum'&&o.visual.kind==='sphere'||o.category==='micro'&&o.visual.kind==='sphere'){
+   const geo=new THREE.SphereGeometry(.5,this.segments||48,Math.round((this.segments||48)*.66));
    const mesh=new THREE.Mesh(geo,material);core.add(mesh);
    if(o.id==='sun'){material.emissive=new THREE.Color('#ef7020');material.emissiveIntensity=.8;group.sun=true;}
    if(textures&&o.visual.texture){const tex=await this.loader.loadAsync(asset(o,'texture')).catch(()=>null);if(generation!==this.generation){tex?.dispose();return;}if(tex){tex.colorSpace=THREE.SRGBColorSpace;material.map=tex;material.color.set('#fff');material.needsUpdate=true;}}
@@ -48,14 +68,6 @@ export class ComparisonScene {
    }
   }else if(mode==='3d'&&o.category==='buildings'){
    for(let i=0;i<5;i++){const level=new THREE.Mesh(new THREE.BoxGeometry(1-i*.15,.2,1-i*.15),material);level.position.y=-.4+i*.2;core.add(level);}
-  }else if(mode==='3d'&&['elephant','whale','shark','dog','cat','giraffe','dinosaur','human','squid'].includes(o.visual.kind)){
-   // Volumetric teaching models. These are explicitly described as illustrations.
-   const part=(x,y,z,sx,sy,sz)=>{const m=new THREE.Mesh(new THREE.SphereGeometry(.5,24,16),material);m.position.set(x,y,z);m.scale.set(sx,sy,sz);core.add(m);};
-   if(o.visual.kind==='human'){part(0,.4,0,.25,.2,.6);part(0,.08,0,.5,.48,.7);part(-.14,-.3,0,.2,.4,.5);part(.14,-.3,0,.2,.4,.5);part(-.34,.02,0,.16,.45,.4);part(.34,.02,0,.16,.45,.4);}
-   else{part(-.08,0,0,.8,.65,.9);part(.32,.1,0,.32,.36,.62);
-    if(['whale','shark','squid'].includes(o.visual.kind)){part(-.42,-.01,0,.18,.55,.12);part(.05,-.34,.15,.3,.3,.12);}
-    else{for(const x of [-.3,.23])for(const z of [-.25,.25])part(x,-.33,z,.13,.34,.15);if(o.visual.kind==='elephant'){part(.45,-.22,0,.1,.55,.2);part(.25,.2,.32,.4,.6,.1);}if(o.visual.kind==='giraffe')part(.24,.3,0,.15,.65,.25);}
-   }
   }else{
    const map=await this.loader.loadAsync(asset(o,'silhouette')).catch(()=>null);
    if(generation!==this.generation){map?.dispose();return;}
@@ -72,9 +84,10 @@ export class ComparisonScene {
   }
   return group;
  }
- update(objects,layout,height,mode,textures){
+ update(objects,layout,height,mode,textures,options={}){
   if(!this.renderer)return;
-  const signature=objects.map(o=>o.id).join(',')+mode+textures;
+  const signature=objects.map(o=>o.id).join(',')+mode+textures+(options.segments||48);
+  this.segments=options.segments||48;this.renderer.setPixelRatio(Math.min(devicePixelRatio,options.pixelRatio||1.75));
   this.mode=mode;this.height=height;this.width=layout.totalWidth;this.baseline=layout.baseline||75;
   // One continuous shared orthographic frame: projected meters use the same scale.
   this.renderer.setSize(layout.totalWidth,height);this.camera.left=0;this.camera.right=layout.totalWidth;this.camera.top=height;this.camera.bottom=0;this.camera.updateProjectionMatrix();
@@ -106,5 +119,6 @@ export class ComparisonScene {
   }
   this.frame=requestAnimationFrame(this.tick);
  }
- dispose(){this.active=false;cancelAnimationFrame(this.frame);for(const g of this.groups.values())this.disposeObject(g);this.groups.clear();this.renderer?.dispose();this.canvas?.remove();}
+ copyOrientation(other,id){const a=other?.groups.get(id),b=this.groups.get(id);if(a&&b){b.core.rotation.copy(a.core.rotation);b.userRotated=a.userRotated;this.time=other.time;}}
+ dispose(){this.active=false;this.generation++;cancelAnimationFrame(this.frame);for(const g of this.groups.values())this.disposeObject(g);this.groups.clear();this.renderer?.dispose();this.canvas?.remove();}
 }

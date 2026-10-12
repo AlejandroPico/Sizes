@@ -32,8 +32,23 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "whale",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": null,
+    "image": "image.png",
+    "imageBounds": {
+      "x": 19,
+      "y": 200,
+      "width": 2136,
+      "height": 396,
+      "imageWidth": 2172,
+      "imageHeight": 724
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-12",
+      "observed": false
+    }
   }
 }

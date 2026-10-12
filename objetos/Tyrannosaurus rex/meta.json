@@ -32,8 +32,23 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "dinosaur",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": null,
+    "image": "image.png",
+    "imageBounds": {
+      "x": 5,
+      "y": 8,
+      "width": 2102,
+      "height": 728,
+      "imageWidth": 2113,
+      "imageHeight": 744
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-12",
+      "observed": false
+    }
   }
 }

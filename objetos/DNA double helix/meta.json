@@ -1,19 +1,19 @@
 {
   "id": "dna",
   "names": {
-    "es": "Doble hélice de ADN",
-    "en": "DNA double helix"
+    "es": "ADN · doble hélice (20 pares de bases)",
+    "en": "DNA double helix (20 base pairs)"
   },
   "category": "quantum",
   "family": "molecules",
   "featured": true,
   "dimensions": {
     "width": 2e-9,
-    "height": 2e-9,
-    "depth": null
+    "height": 6.8e-9,
+    "depth": 2e-9
   },
   "shape": "molecule",
-  "basis": "helix-diameter",
+  "basis": "reference-dna-segment",
   "color": "#bcabed",
   "folder": "DNA double helix",
   "tags": [
@@ -23,15 +23,15 @@
   "environment": "quantum",
   "reviewStatus": "initial",
   "summary": {
-    "es": "Escala de referencia definida por el modelo indicado; no representa una bola sólida fotografiada.",
-    "en": "Reference scale defined by the stated model; it does not represent a photographed solid ball."
+    "es": "Fragmento ilustrativo de ADN en forma B: 20 pares de bases, diámetro de 2 nm y longitud de referencia de 6,8 nm (0,34 nm por par). La doble hélice puede ser mucho más larga; esta ficha muestra un tramo definido, no una longitud universal del ADN.",
+    "en": "Illustrative B-DNA segment: 20 base pairs, 2 nm diameter and 6.8 nm reference length (0.34 nm per pair). Actual double helices can be far longer; this entry shows a defined segment, not a universal DNA length."
   },
   "status": "ready",
   "measurementStatus": "representative",
-  "source": "https://physics.nist.gov/cuu/Constants/",
+  "source": "https://www.ncbi.nlm.nih.gov/books/NBK9944/",
   "sourceRetrieved": "2026-10-12",
   "visual": {
-    "kind": "molecule",
+    "kind": "dna",
     "fidelity": "illustrative",
     "silhouette": "silhouette.svg",
     "model": "model.json"

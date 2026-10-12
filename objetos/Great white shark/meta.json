@@ -32,8 +32,23 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "shark",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": null,
+    "image": "image.png",
+    "imageBounds": {
+      "x": 11,
+      "y": 15,
+      "width": 1967,
+      "height": 757,
+      "imageWidth": 1991,
+      "imageHeight": 790
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-12",
+      "observed": false
+    }
   }
 }

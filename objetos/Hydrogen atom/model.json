@@ -1,9 +1,9 @@
 {
-  "type": "sphere",
+  "type": "atom",
   "dimensions": {
     "width": 1.058354421e-10,
     "height": 1.058354421e-10,
     "depth": null
   },
-  "representation": "procedural illustration, not a measured surface"
+  "representation": "Conventional orbital illustration; paths are not actual electron trajectories."
 }

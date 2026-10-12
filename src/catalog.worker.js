@@ -11,8 +11,8 @@ self.onmessage=async ({data:{id,type,payload}})=>{
   }
   if(!db) throw Error('Catalog not initialized');
   // Catalog JSON is authoritative; no runtime calls to external data services.
-  const stmt=db.prepare('SELECT data FROM objects ORDER BY extent IS NULL, extent, id');
-  const objects=[]; while(stmt.step()) objects.push(JSON.parse(stmt.getAsObject().data)); stmt.free();
+  const stmt=db.prepare('SELECT o.data,q.report FROM objects o LEFT JOIN quality q ON q.object_id=o.id ORDER BY o.extent IS NULL, o.extent, o.id');
+  const objects=[]; while(stmt.step()){const row=stmt.getAsObject();objects.push({...JSON.parse(row.data),audit:row.report?JSON.parse(row.report):null});}stmt.free();
   self.postMessage({id,result:objects});
  }catch(error){self.postMessage({id,error:error.message});}
 };

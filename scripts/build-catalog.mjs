@@ -2,6 +2,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { readdir, readFile, mkdir, copyFile, cp, writeFile } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { createHash } from 'node:crypto';
+import { auditObject,auditSummary } from '../src/audit.js';
 
 await mkdir('data',{recursive:true}); await mkdir('public',{recursive:true});
 const database = new DatabaseSync(':memory:');
@@ -11,9 +12,11 @@ database.exec(`PRAGMA foreign_keys=ON;
  CREATE TABLE tags(object_id TEXT REFERENCES objects(id), tag TEXT, PRIMARY KEY(object_id,tag));
  CREATE TABLE assets(object_id TEXT REFERENCES objects(id), kind TEXT, path TEXT, fidelity TEXT, PRIMARY KEY(object_id,kind));
  CREATE TABLE sources(object_id TEXT REFERENCES objects(id), url TEXT, retrieved TEXT, PRIMARY KEY(object_id,url));
+ CREATE TABLE quality(object_id TEXT PRIMARY KEY REFERENCES objects(id), report TEXT NOT NULL);
  CREATE TABLE metadata(key TEXT PRIMARY KEY,value TEXT NOT NULL);
  CREATE INDEX object_family ON objects(category,family); CREATE INDEX object_size ON objects(extent); CREATE INDEX tag_search ON tags(tag);`);
 const objects=[];
+const qualityReports=new Map();
 for(const dir of (await readdir('objetos',{withFileTypes:true})).filter(d=>d.isDirectory()).sort((a,b)=>a.name.localeCompare(b.name,'en'))){
  const o=JSON.parse(await readFile(join('objetos',dir.name,'meta.json'),'utf8'));
  if(o.folder!==dir.name) throw Error(`Folder mismatch: ${dir.name}`);
@@ -26,15 +29,18 @@ for(const dir of (await readdir('objetos',{withFileTypes:true})).filter(d=>d.isD
  for(const [lang,name] of Object.entries(o.names)) database.prepare('INSERT INTO translations VALUES (?,?,?,?)').run(o.id,lang,name,o.summary[lang] || null);
  for(const tag of new Set(o.tags)) database.prepare('INSERT INTO tags VALUES (?,?)').run(o.id,tag);
  database.prepare('INSERT INTO sources VALUES (?,?,?)').run(o.id,o.source,o.sourceRetrieved);
- for(const [kind,path] of Object.entries(o.visual).filter(([k,v])=>['silhouette','texture','clouds','glb','model'].includes(k)&&v)) {
+ const assetChecks={};
+ for(const [kind,path] of Object.entries(o.visual).filter(([k,v])=>['silhouette','texture','textureLow','clouds','glb','model','image'].includes(k)&&v)) {
    if(path.includes('..') || path.includes('/') || path.includes('\\')) throw Error(`Nonlocal asset ${o.id}`);
-   await readFile(join('objetos',dir.name,path));
+   const bytes=await readFile(join('objetos',dir.name,path));
+   assetChecks[kind]={exists:true,path,bytes:bytes.length};
    database.prepare('INSERT INTO assets VALUES (?,?,?,?)').run(o.id,kind,path,o.visual.fidelity);
  }
+ const audit=auditObject(o,assetChecks);qualityReports.set(o.id,audit);database.prepare('INSERT INTO quality VALUES (?,?)').run(o.id,JSON.stringify(audit));
  objects.push(o);
 }
 const hash=createHash('sha256').update(JSON.stringify(objects)).digest('hex');
-database.prepare('INSERT INTO metadata VALUES (?,?)').run('schema_version','1');
+database.prepare('INSERT INTO metadata VALUES (?,?)').run('schema_version','2');
 database.prepare('INSERT INTO metadata VALUES (?,?)').run('catalog_sha256',hash);
 database.prepare('INSERT INTO metadata VALUES (?,?)').run('object_count',String(objects.length));
 database.exec(`VACUUM INTO '${resolve('data/catalog.sqlite').replaceAll('\\','/').replaceAll("'","''")}.next'`);
@@ -46,5 +52,8 @@ await cp('objetos','public/objetos',{recursive:true});
 await copyFile('node_modules/sql.js/dist/sql-wasm.wasm','public/sql-wasm.wasm');
 await copyFile('AGENTS.md','public/AGENTS.md');
 await copyFile('favicon.svg','public/favicon.svg');
-await writeFile('data/catalog-summary.json',JSON.stringify({schema:1,count:objects.length,ready:objects.filter(o=>o.status==='ready').length,pending:objects.filter(o=>o.status==='pending').length,hash},null,2)+'\n');
+const reports=objects.map(o=>({...o,audit:qualityReports.get(o.id)}));
+await writeFile('data/quality-report.json',JSON.stringify({schema:2,catalogHash:hash,summary:auditSummary(reports),objects:reports.map(o=>({id:o.id,...o.audit}))},null,2)+'\n');
+await copyFile('data/quality-report.json','public/quality-report.json');
+await writeFile('data/catalog-summary.json',JSON.stringify({schema:2,count:objects.length,ready:objects.filter(o=>o.status==='ready').length,pending:objects.filter(o=>o.status==='pending').length,hash},null,2)+'\n');
 console.log(`${objects.length} entries · ${objects.filter(o=>o.status==='ready').length} comparable · SQLite ${(await import('node:fs/promises')).stat?Math.round((await (await import('node:fs/promises')).stat('data/catalog.sqlite')).size/1024):''} KB`);

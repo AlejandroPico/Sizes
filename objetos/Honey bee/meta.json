@@ -32,8 +32,23 @@
   "sourceRetrieved": "2026-10-12",
   "visual": {
     "kind": "bee",
-    "fidelity": "illustrative",
+    "fidelity": "generated-realistic",
     "silhouette": "silhouette.svg",
-    "model": "model.json"
+    "model": null,
+    "image": "image.png",
+    "imageBounds": {
+      "x": 30,
+      "y": 39,
+      "width": 1491,
+      "height": 943,
+      "imageWidth": 1536,
+      "imageHeight": 1024
+    },
+    "imageProvenance": {
+      "provider": "OpenAI ImageGen",
+      "type": "generated-illustration",
+      "date": "2026-10-12",
+      "observed": false
+    }
   }
 }

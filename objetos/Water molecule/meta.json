@@ -10,7 +10,7 @@
   "dimensions": {
     "width": 2.75e-10,
     "height": 2.75e-10,
-    "depth": null
+    "depth": 2.75e-10
   },
   "shape": "molecule",
   "basis": "representative-extent",

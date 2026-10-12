@@ -1,0 +1,62 @@
+{
+  "fecha": "2026-10-12",
+  "recursos": [
+    {
+      "id": "human",
+      "archivo": "objetos/Person (1.75 m)/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One anonymous adult Caucasian man, full body, standing upright front view, neutral expression, average healthy proportions representing 1.75 m height. Arms close to sides, hands natural, feet on a common baseline. Plain gray short sleeve T-shirt, dark simple trousers and neutral shoes, no brands. Entire person visible including head and shoes.",
+      "edicion_transparencia": "Remove haze, glow, gradient and floor outside the exact silhouette of the man. Outside the person pixels must be fully transparent (alpha 0). Preserve anatomy, clothes, pose, proportions, neutral lighting and full body. No shadows beyond the silhouette."
+    },
+    {
+      "id": "elephant",
+      "archivo": "objetos/African elephant/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One adult African savanna elephant, Loxodonta africana, complete strict left-facing side profile. Whole animal visible from trunk tip and tusks through tail tip, four anatomically correct legs and feet resting on the same imaginary baseline. Large African ears, natural trunk descending then slightly curling at its tip, two normal ivory tusks, realistic massive body and wrinkled gray skin."
+    },
+    {
+      "id": "blue-whale",
+      "archivo": "objetos/Blue whale/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One adult blue whale, Balaenoptera musculus, entire body in strict left-facing side profile, head on left and tail on right. Fully visible long streamlined blue-gray body, natural mottled skin, broad flat head and mouth line, throat grooves, small eye, tapered pectoral flipper, small dorsal fin far back, tail peduncle and complete horizontal two-lobed flukes visible. Relaxed straight swimming posture."
+    },
+    {
+      "id": "dog-labrador",
+      "archivo": "objetos/Labrador retriever/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One adult yellow Labrador retriever in full left-facing side profile, standing naturally on four anatomically correct legs with all paws at ground baseline. Broad Labrador muzzle, floppy ears, short golden-cream fur, strong compact torso, natural level straight thick otter tail, mouth closed. No collar, harness or accessories."
+    },
+    {
+      "id": "cat",
+      "archivo": "objetos/Domestic cat/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One adult domestic shorthair brown-gray tabby cat in complete left-facing side profile, standing calmly on four anatomically correct paws at the same baseline, natural feline proportions and moderately long gently raised tail, short striped fur, pointed ears, whiskers, mouth closed. No collar or accessories."
+    },
+    {
+      "id": "white-shark",
+      "archivo": "objetos/Great white shark/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One adult great white shark, Carcharodon carcharias, complete strict left-facing side profile swimming straight and level. Heavy streamlined body, conical snout, black eye, five gill slits, gray upper skin and white belly, triangular dorsal fin, pectoral fins, small second dorsal and anal fins, complete crescent caudal fin with longer upper lobe. Mouth mostly closed. No water."
+    },
+    {
+      "id": "bee",
+      "archivo": "objetos/Honey bee/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One adult worker western honey bee, Apis mellifera, entire body in coherent left-facing side view with slight dorsal visibility. Fuzzy thorax, amber-brown black-banded abdomen, head with compound eye, two antennae, exactly six jointed legs attached to thorax, two pairs of transparent veined wings folded back and readable. Fine hairs. No flowers or pollen objects."
+    },
+    {
+      "id": "trex",
+      "archivo": "objetos/Tyrannosaurus rex/image.png",
+      "herramienta": "image_gen integrada",
+      "tipo": "ilustración realista generada, no fotografía observada",
+      "prompt": "Use case: scientific-educational. Asset type: single realistic generated scientific catalogue illustration for an accurate visual size comparator. Neutral even natural illumination. Full subject visible, anatomically accurate natural proportions, orthographic-like profile without exaggerated perspective. Tight framing with very little transparent margin. Genuinely transparent alpha background everywhere outside subject silhouette. No habitat, floor, backdrop, glow, haze, external shadow, text, labels, watermark, border or extra objects. Generated illustration, not observed photography. One adult Tyrannosaurus rex in complete left-facing strict side profile, standing naturally with modern scientifically plausible anatomy: torso near horizontal, enormous heavy skull with closed jaws and lips over teeth, powerful hind limbs with three weight-bearing toes, tiny two-finger forelimbs, long muscular tail held horizontally balancing torso. Natural neutral gray-brown textured skin, no fantasy spikes or armor. No upright kangaroo posture, no tail dragging or cinematic roaring."
+    }
+  ]
+}

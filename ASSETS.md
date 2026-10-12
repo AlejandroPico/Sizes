@@ -24,3 +24,9 @@ Los contornos proceden de [world-atlas 2.0.2](https://github.com/topojson/world-
 ## Otros ámbitos
 
 Cada ficha conserva su enlace de fuente y estado de medida. La primera colección contiene ejemplos representativos y fuentes generales que deben sustituirse por referencias específicas durante la revisión científica. No se afirma que una fuente de categoría respalde automáticamente todos los ejes secundarios de una ilustración. El estado `reviewStatus: initial` diferencia esta incorporación inicial de una revisión científica completa.
+
+## Recortes realistas de la edición 0.2.0
+
+Ocho ilustraciones originales generadas con la herramienta integrada ImageGen: persona de referencia, elefante africano, ballena azul, labrador, gato, tiburón blanco, abeja y Tyrannosaurus rex. Los archivos `image.png` viven en sus carpetas de objetos; los encuadres alfa se conservan en `visual.imageBounds`. Son ilustraciones realistas, no fotografías observadas ni modelos volumétricos medidos. No se han modificado sus píxeles después de la generación.
+
+Los prompts, sujetos y rutas de salida están documentados en [data/image-prompts.json](data/image-prompts.json). Las imágenes se usan en el comparador como recortes planos cuando no hay un modelo 3D fiable, y como miniaturas en la biblioteca. Los átomos, el agua y el ADN tienen modelos geométricos ilustrativos propios. El ADN representa un fragmento definido de 20 pares de bases, con referencia a [The Cell, NCBI Bookshelf](https://www.ncbi.nlm.nih.gov/books/NBK9944/). La textura terrestre actual es [NASA Blue Marble](https://svs.gsfc.nasa.gov/2915/).

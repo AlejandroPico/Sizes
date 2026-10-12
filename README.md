@@ -2,17 +2,18 @@
 
 Comparador visual de tamaños de Alejandro Pico. Desde las escalas microscópicas hasta el universo observable, con varios objetos sobre una misma escala.
 
-**Regla de diseño del propietario:** comparación a pantalla completa y botones independientes en la esquina superior derecha. Sin textos promocionales, contadores, cabecera de marca, sugerencias, resúmenes decorativos ni pie de página. Identidad y enlaces solo en Acerca de. Texturas y 2D/3D son botones. Esquinas rectas. El selector de objetos seguirá revisándose con el propietario.
+**Regla de diseño del propietario:** comparación a pantalla completa y botones independientes en la esquina superior derecha. Sin textos promocionales, contadores, cabecera de marca, sugerencias, resúmenes decorativos ni pie de página. Identidad y enlaces solo en Acerca de. Un único botón alterna 3D, texturas de menor detalle y vectorial; 3D es el modo inicial. Añadir objetos se encuentra en los bordes, a la altura de sus selectores. Esquinas rectas y desplazamiento sin barras visibles.
 
-## Primera edición
+## Edición 0.2.0
 
 - Tierra y Luna al empezar. Añadir, cambiar y quitar objetos sin un límite artificial de diez.
-- Vista 2D, texturas y vista 3D con rotación individual. Representación vectorial cuando WebGL no está disponible.
-- Catálogo por categorías y familias, búsqueda con nombres y etiquetas, destacados y filtros.
-- Enciclopedia, definiciones de las medidas y detalles compartidos cuando hay datos compatibles.
+- Tres calidades cíclicas: 3D por defecto, texturas 2D de menor resolución y vectorial. Rotación individual cuando existe un modelo volumétrico.
+- Catálogo completo agrupado en familias y subfamilias anidadas. Pulsar la ficha añade su representante; «+» expande variantes. Búsqueda global y carga progresiva al desplazar.
+- Enciclopedia con la misma representación del comparador, búsqueda y selector compactos en el encabezado. Detalles compartidos cuando hay datos compatibles.
 - Español, catalán, inglés, francés, alemán, portugués, italiano, chino, japonés e hindi en la navegación. Los textos del catálogo están inicialmente en español e inglés; las traducciones faltantes se identifican.
-- Temas mañana, tarde, noche y automático según fecha y hora local. El automático aproxima el horario estacional; no calcula el amanecer real sin ubicación.
-- Alt + clic en información, o Alt+I: inventario con búsqueda y exportación XLSX, CSV, JSON, TXT y SQLite; consulta y descarga de `AGENTS.md`.
+- El botón de tema alterna automático, mañana, tarde y noche con iconos propios. Idiomas en un micromenú; una elección manual muestra su bandera.
+- Alt + clic en información, o Alt+I: inventario con auditoría de datos y recursos, incidencias, estado de revisión y filtros; exportación XLSX, CSV, JSON, TXT y SQLite. El superprompt `AGENTS.md` está en castellano.
+- Ocho recortes realistas generados para representantes de personas y animales. Átomos, molécula de agua y doble hélice de ADN con representaciones reconocibles.
 - `favicon.svg` original en la raíz: dos cuerpos de diferente tamaño sobre una misma regla.
 
 El catálogo inicial tiene **711 registros: 318 comparables y 393 pendientes**. Incluye 459 entradas de lunas importadas de Universal y 177 contornos de países y territorios. Las lunas sin medida no se dibujan a una escala inventada. Los ejemplos de otros ámbitos son una primera selección representativa y necesitan ampliación y revisión de fuentes por etapas.
@@ -21,7 +22,7 @@ El catálogo inicial tiene **711 registros: 318 comparables y 393 pendientes**. 
 
 La fuente editable es `objetos/<nombre canónico>/meta.json` y sus archivos locales. Cada objeto tiene carpeta propia. Las medidas internas se expresan en metros. Las ilustraciones, texturas observadas y modelos reconstruidos se distinguen en los metadatos y en la enciclopedia.
 
-`npm run prepare:catalog` construye `data/catalog.sqlite` con tablas de objetos, traducciones, etiquetas, recursos y fuentes. También prepara las copias para la publicación. El navegador consulta SQLite mediante sql.js en un Worker. No hay servidor de base de datos, cuentas ni servicios externos de almacenamiento.
+`npm run prepare:catalog` construye `data/catalog.sqlite` con tablas de objetos, traducciones, etiquetas, recursos, fuentes y auditoría (`quality`, esquema 2). También genera `data/quality-report.json` y las copias de publicación. El navegador consulta SQLite mediante sql.js en un Worker. No hay servidor de base de datos, cuentas ni servicios externos de almacenamiento.
 
 El generador inicial `scripts/seed-catalog.mjs` documenta la migración de partida. **No se ejecuta durante el desarrollo normal**: volver a usarlo sobrescribe las fichas curadas. Añade y corrige directamente las carpetas de objetos y regenera el catálogo.
 
@@ -52,7 +53,7 @@ Las pruebas incluyen proporciones, escalas extremas, más de diez objetos, expor
 
 ## Límites que deben conservarse visibles
 
-Las razones rápidas comparan la mayor dimensión declarada, sin inferir volumen o masa. Los países usan cartografía Natural Earth en proyección equivalente: conserva áreas, pero las longitudes proyectadas no son distancias geodésicas exactas. Algunos países incluyen territorios separados. Las ciudades usan cuadrados de superficie equivalente, con su ámbito territorial explícito, mientras se incorporan límites reales. Los edificios tienen anchuras ilustrativas. Los modelos de animales son ilustrativos, no escaneos anatómicos. No se atribuye al electrón un diámetro físico inventado; las escalas teóricas se identifican.
+Los países usan cartografía Natural Earth en proyección equivalente: conserva áreas, pero las longitudes proyectadas no son distancias geodésicas exactas. Algunos países incluyen territorios separados. Las ciudades usan cuadrados de superficie equivalente, con su ámbito territorial explícito, mientras se incorporan límites reales. Los edificios tienen anchuras ilustrativas. Los recortes de animales son ilustraciones realistas generadas, no fotografías observadas ni escaneos anatómicos; se mantienen planos cuando no hay un modelo fiable. El ADN muestra un fragmento declarado de 20 pares de bases. No se atribuye al electrón un diámetro físico inventado; las escalas teóricas se identifican.
 
 La enciclopedia todavía requiere más traducciones, fotos y revisión específica de fuentes en los ámbitos nuevos. El catálogo inicial no pretende agotar todas las especies, edificios, partículas o cuerpos conocidos.
 

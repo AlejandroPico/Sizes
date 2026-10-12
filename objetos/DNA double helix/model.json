@@ -1,9 +1,9 @@
 {
-  "type": "molecule",
+  "type": "dna",
   "dimensions": {
     "width": 2e-9,
-    "height": 2e-9,
-    "depth": null
+    "height": 6.8e-9,
+    "depth": 2e-9
   },
-  "representation": "procedural illustration, not a measured surface"
+  "representation": "Procedural double helix, 20 base pairs"
 }

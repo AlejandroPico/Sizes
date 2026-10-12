@@ -2,6 +2,8 @@ node_modules/
 dist/
 public/objetos/
 public/catalog.sqlite
+public/quality-report.json
+data/*.tmp
 public/AGENTS.md
 public/sql-wasm.wasm
 test-results/
