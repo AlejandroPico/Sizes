@@ -4,7 +4,7 @@ Comparador visual de tamaños de Alejandro Pico. Desde las escalas microscópica
 
 **Regla de diseño del propietario:** comparación a pantalla completa y barra compacta de botones contiguos en la esquina superior derecha. Sin textos promocionales, contadores, cabecera de marca, sugerencias, resúmenes decorativos ni pie de página. Identidad y enlaces solo en Acerca de. Un único botón alterna 3D, texturas de menor detalle y vectorial; 3D es el modo inicial. Añadir objetos se encuentra en los extremos de la secuencia. Esquinas rectas y desplazamiento sin barras visibles.
 
-## Edición 0.3.0
+## Edición 0.3.1
 
 - Tierra y Luna al empezar. Añadir, cambiar y quitar objetos sin un límite artificial de diez.
 - Tres calidades cíclicas: 3D por defecto, texturas 2D de menor resolución y vectorial. Rotación individual cuando existe un modelo volumétrico.
@@ -13,7 +13,7 @@ Comparador visual de tamaños de Alejandro Pico. Desde las escalas microscópica
 - Español, catalán, inglés, francés, alemán, portugués, italiano, chino, japonés e hindi en la navegación. Los textos del catálogo están inicialmente en español e inglés; las traducciones faltantes se identifican.
 - El botón de tema alterna automático, mañana, tarde y noche con iconos propios. Idiomas en un micromenú; una elección manual muestra su bandera.
 - Alt + clic en información, o Alt+I: inventario con auditoría de datos y recursos, incidencias, estado de revisión y filtros; exportación XLSX, CSV, JSON, TXT y SQLite. El superprompt `AGENTS.md` está en castellano.
-- Sol con superficie animada, corona y plasma volumétrico; Sirio A y Betelgeuse con estilos estelares propios. Mapas planetarios mejorados, anillos texturizados de Saturno y modelos NASA para Ceres, Vesta, Bennu y Eros. Tierra y Luna conservadas.
+- Sol con superficie animada y resplandor difuso, sin hilos ni arcos de plasma; Sirio A y Betelgeuse emplean el mismo modelo base con su filtro de color. Mapas planetarios mejorados, anillos texturizados de Saturno y modelos NASA para Ceres, Vesta, Bennu y Eros. Tierra y Luna conservadas.
 - Recortes realistas de animales, transportes, microorganismos y edificios; imágenes 2D del mismo modelo para cuerpos con GLB. Orden de recursos: modelo 3D disponible, imagen o textura adecuada, y vector como última alternativa.
 - En móvil vertical, comparación vertical con desplazamiento táctil; al girarlo, comparación horizontal. Un lienzo del tamaño visible evita límites gráficos en listas largas. La escala física sigue siendo común.
 - Auditoría reproducible de las 711 fichas con recursos, resoluciones, transparencia, modelos y tareas pendientes: `npm run review:visuals` genera `data/visual-review.json` y `data/visual-review.md`.

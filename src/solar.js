@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
 // An illustrative, time-compressed plasma rendering, not an observation or a simulation.
 export const plasmaNoise=`
@@ -16,7 +15,7 @@ export function createSolarBody(core,root,{detailed=true,style='sun'}={}){
   uniform float uTime;uniform float uPalette;varying vec3 vPoint;varying vec3 vNormal;varying vec3 vEye;${noise}
   void main(){vec3 p=normalize(vPoint);float t=uTime*.025;
    vec3 warp=vec3(fbm(p*9.+t),fbm(p*9.+vec3(9,4,2)-t),fbm(p*9.+vec3(4,8,1)+t));
-   float granule=noise3(p*(uPalette==1.?12.:135.)+warp*8.+vec3(t*2.,0,0));float fine=noise3(p*390.+warp*7.);
+   float granule=noise3(p*135.+warp*8.+vec3(t*2.,0,0));float fine=noise3(p*390.+warp*7.);
    float activity=fbm(p*24.+warp*2.-t);float cells=smoothstep(.23,.8,granule);
    float spots=smoothstep(.69,.8,fbm(p*5.+vec3(6,2,4)));float darkness=1.-spots*.9;
    float heat=(.12+cells*.43+fine*.12+activity*.4)*darkness;
@@ -42,44 +41,6 @@ export function createSolarBody(core,root,{detailed=true,style='sun'}={}){
     #include <colorspace_fragment>
    }`});
   const halo=new THREE.Mesh(new THREE.PlaneGeometry(1.65,1.65),corona);halo.position.z=-.02;root.add(halo);materials.push(corona);
-  if(style!=='sun')return {time,materials};
-  const geometries=[],plumes=[];
-  // Irregular active regions, different heights and inclinations. No ring of repeated hoops.
-  const regions=[[-1.06,.12,.11,.14],[-.35,.93,.075,.1],[.58,-.83,.09,.13]];
-  regions.forEach(([bx,by,bz,rise],region)=>{
-   const base=new THREE.Vector3(bx,by,bz).normalize(),tangent=new THREE.Vector3(-base.y,base.x,.16).normalize(),across=new THREE.Vector3().crossVectors(base,tangent).normalize();
-   for(let strand=0;strand<9;strand++){
-    const points=[],spread=(strand-4)*.0048;
-    for(let j=0;j<=48;j++){const u=j/48,angle=(u-.5)*(.14+rise*.7),height=Math.pow(Math.sin(Math.PI*u),.7)*(rise+spread*1.8)*(1.+Math.sin(u*8.+region)*.16),twist=u*12.+strand*.8;
-     const point=base.clone().addScaledVector(tangent,angle).normalize().multiplyScalar(.498+height);
-     point.addScaledVector(across,spread+Math.sin(twist)*Math.sin(Math.PI*u)*.006).addScaledVector(tangent,Math.cos(twist)*Math.sin(Math.PI*u)*.003);points.push(point);
-    }
-    const geometry=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),48,.0017+strand%3*.0005,5,false);
-    if(strand===4)plumes.push(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),64,.018,14,false));
-    geometry.setAttribute('aSeed',new THREE.Float32BufferAttribute(new Float32Array(geometry.attributes.position.count).fill(region*.73+strand*.17),1));geometries.push(geometry);
-   }
-  });
-  [[.9,.46,.13],[-.72,-.68,.14],[.32,.95,.18]].forEach(([bx,by,bz],region)=>{
-   const base=new THREE.Vector3(bx,by,bz).normalize(),side=new THREE.Vector3(-by,bx,.1).normalize();
-   for(let strand=0;strand<15;strand++){
-    const points=[];
-    for(let j=0;j<=48;j++){const u=j/48,spread=(strand-7)*.002;const point=base.clone().multiplyScalar(.498+u*(.12+strand*.003)).addScaledVector(side,Math.sin(u*3.7)*(.05+spread)+Math.sin(u*13.+strand)*.009*u);point.z+=Math.sin(u*8.+strand)*.014*u;points.push(point);}
-    const geometry=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),48,.0015+(strand%3)*.0005,5,false);geometry.setAttribute('aSeed',new THREE.Float32BufferAttribute(new Float32Array(geometry.attributes.position.count).fill(region*1.13+strand*.21+8),1));geometries.push(geometry);
-    if(strand===7)plumes.push(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),64,.021,14,false));
-   }
-  });
-  const filaments=new THREE.ShaderMaterial({uniforms:{uTime:time},transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,side:THREE.DoubleSide,vertexShader:`uniform float uTime;attribute float aSeed;varying float vSeed;${vertex.replace('void main(){','void main(){vSeed=aSeed;').replace('vec4 eye=modelViewMatrix*vec4(position,1.);','vec3 plasma=position+normalize(position)*smoothstep(.5,.62,length(position))*sin(uTime*.35+aSeed)*.013;vec4 eye=modelViewMatrix*vec4(plasma,1.);')}`,fragmentShader:`
-   uniform float uTime;varying vec3 vPoint;varying vec2 vUv;varying float vSeed;${noise}
-   void main(){float flow=fbm(vec3(vUv.x*24.-uTime*.7,vUv.y*6.,vSeed*7.));float pulse=.5+.5*sin(uTime*.32+vSeed*4.);float ends=pow(sin(vUv.x*3.14159),.3);float alpha=(.045+flow*.24)*(.4+pulse*.6)*ends;
-    vec3 color=mix(vec3(1.,.085,.008),vec3(1.,.62,.17),smoothstep(.2,.8,flow));gl_FragColor=vec4(color,alpha);
-    #include <colorspace_fragment>
-   }`});
-  core.add(new THREE.Mesh(mergeGeometries(geometries),filaments));geometries.forEach(g=>g.dispose());materials.push(filaments);
-  const plasma=new THREE.ShaderMaterial({uniforms:{uTime:time},transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,side:THREE.DoubleSide,vertexShader:`uniform float uTime;${noise}${vertex.replace('vec4 eye=modelViewMatrix*vec4(position,1.);','vec3 plume=position+normal*(fbm(position*65.+vec3(0,uTime*.11,0))-.5)*.024;vec4 eye=modelViewMatrix*vec4(plume,1.);')}`,fragmentShader:`uniform float uTime;varying vec3 vPoint;varying vec3 vNormal;varying vec3 vEye;varying vec2 vUv;${noise}
-   void main(){float turbulent=fbm(vPoint*95.+vec3(0,-uTime*.45,uTime*.1));float density=smoothstep(.25,.7,turbulent);float soft=pow(abs(dot(vNormal,vEye)),.6);float ends=pow(sin(vUv.x*3.14159),.5);float alpha=density*soft*ends*.65;
-    vec3 c=mix(vec3(.95,.08,.001),vec3(1.,.47,.045),density);gl_FragColor=vec4(c,alpha);
-    #include <colorspace_fragment>
-   }`});core.add(new THREE.Mesh(mergeGeometries(plumes),plasma));plumes.forEach(g=>g.dispose());materials.push(plasma);
  }
  return {time,materials};
 }

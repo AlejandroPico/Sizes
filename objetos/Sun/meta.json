@@ -17,8 +17,8 @@
   "measurementStatus": "measured",
   "color": "#ffb16c",
   "summary": {
-    "es": "La estrella del Sistema Solar. La representación animada recrea la granulación, la corona y los filamentos de plasma con color y tiempo realzados para su observación. Es una ilustración inspirada en fenómenos solares, no actividad solar en directo. La medida corresponde a la fotosfera y excluye el resplandor exterior.",
-    "en": "The star of the Solar System. This animated rendering illustrates granulation, the corona and plasma filaments with enhanced color and time. It is inspired by solar phenomena, not live solar activity. The measurement refers to the photosphere, excluding the outer glow."
+    "es": "La estrella del Sistema Solar. La representación conserva una superficie granular animada y un resplandor difuso, con color y tiempo interpretativos. No muestra actividad solar en directo. La medida corresponde a la fotosfera y excluye el resplandor exterior.",
+    "en": "The star of the Solar System. The rendering uses an animated granular surface and a diffuse glow, with illustrative color and time. It is not live solar activity. The measurement refers to the photosphere, excluding the outer glow."
   },
   "visual": {
     "kind": "sphere",
